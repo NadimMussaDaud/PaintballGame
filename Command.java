@@ -1,4 +1,4 @@
-public enum Commands {
+public enum Command {
     
         GAME("game", "Create a new game"),
         MOVE("move", "Move a player"),
@@ -9,25 +9,26 @@ public enum Commands {
         BUNKERS("bunkers", "List the bunkers of the current team, by the order they were seized"),
         PLAYERS("players", "List the active players of the current team, by the order they were created"),
         HELP("help", "Show available commands"),
-        QUIT("quit", "End program execution");
+        QUIT("quit", "End program execution"),
+        UNKNOWN("unknown","Invalid Command");
     
         private String name, message;
 
-        Commands(String name, String message) {
+        Command(String name, String message) {
             this.name = name;
             this.message = message;
         }
     
-        public String getNome() {
+        public String getName() {
             return name;
         }
         public String getMessage(){
             return message;
         }  
 
-        public static Commands getCommandByName(String name) {
-            for (Commands command : Commands.values()) {
-                if (command.getNome().equalsIgnoreCase(name)) {
+        public static Command getCommandByName(String name) {
+            for (Command command : Command.values()) {
+                if (command.getName().equalsIgnoreCase(name)) {
                     return command;
                 }
             }
