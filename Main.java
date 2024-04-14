@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Main {
 
+    private static String FATAL_ERROR = "FATAL ERROR: Insufficient number of teams.";
+    private static String INVALID_TEAM = "Team not created.";
+    private static String INVALID_BUNKER = "Bunker not created.";
     private static String INVALID_COMMAND = "Invalid Command";
     private static String HELP_MESSAGE_FORMAT = "%s - %s\n";
     private static String QUIT_MESSAGE = "Bye.";
@@ -27,7 +30,6 @@ public class Main {
         switch(command){
                 case GAME -> {
                     initGame(in);
-                    in.nextLine();
                 }
                 case MOVE -> {
                     in.nextLine();
@@ -66,24 +68,58 @@ public class Main {
     }
 
     private static void initGame(Scanner in) {
-        int witdh = in.nextInt();
+        int width = in.nextInt();
         int height = in.nextInt();
         int teams = in.nextInt();
         int bunkers = in.nextInt();
 
-        game = new Game(witdh,height,teams,bunkers);
+        game = new GameClass(width,height,teams,bunkers);
         
         //Read bunkers
         System.out.printf("%d bunkers:\n", bunkers);
         for(int i = 0 ; i < bunkers; i++ ){
-            game.addBunker(in.nextInt(),in.nextInt(), in.nextInt(), in.nextLine().trim());
+            int x = in.nextInt();
+            int y = in.nextInt();
+            int treasure = in.nextInt();
+            String name = in.nextLine().trim();
+            if (validBunker(width, height, x, y, treasure, name))
+                game.addBunker(x,y,treasure, name);
+            else
+                System.out.println(INVALID_BUNKER);
         }
         
         //Read teams
         System.out.printf("%d teams:\n", teams);
         for(int i = 0 ; i < teams; i++ ){
-            game.addTeam(in.next(), in.nextLine().trim());
+            String team = in.next();
+            String bunker = in.nextLine().trim();
+
+            if(ValidTeam(team, bunker)){
+                game.addTeam(team, bunker);
+            }else
+                System.out.println(INVALID_TEAM);
         }
+        
+        if(!game.canPlay()){
+            game = null;
+            System.out.println(FATAL_ERROR);
+        }
+    }
+
+    private static boolean ValidTeam(String team, String bunker) {
+        if( game.hasTeam(team) || !game.hasBunker(bunker) || game.isOccupiedBunker(bunker) )
+            return false;
+        return true;
+
+    }
+
+    private static boolean validBunker(int width, int height,int x, int y, int treasure, String name) {
+        if ( x < 0 || x > width || y < 0 || y > height || treasure <= 0)
+            return false;
+        if( game.hasBunker(name) || !game.isEmpty(x,y) )
+            return false;
+
+        return true;
     }
 
     private static void invalidCommand(){

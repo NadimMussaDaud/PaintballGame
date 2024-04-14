@@ -1,21 +1,9 @@
-
-public class Game implements GameInterface{
-
-
-    private int teamsNumber, width, height, bunkersNumber;
-
-    public Game(int width, int height, int teamsNumber, int bunkersNumber){
-        this.width = width;
-        this.height = height;
-        this.teamsNumber = teamsNumber;
-        this.bunkersNumber = bunkersNumber;
-    }
-
-    public void addBunker(int x, int y, int treasure, String name){
-
-    }
-    public void addTeam(String name, String bunker){
-
-    }
-
+public interface Game {
+    void addBunker(int x, int y, int treasure, String name);
+    void addTeam(String name, String bunker);
+    public boolean hasBunker(String name);
+    public boolean isEmpty(int x, int y);
+    boolean hasTeam(String team);
+    boolean isOccupiedBunker(String bunker);
+    boolean canPlay();
 }
