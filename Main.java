@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import dataStructures.Array;
 
 public class Main {
 
@@ -8,7 +9,6 @@ public class Main {
     private static String INVALID_COMMAND = "Invalid Command";
     private static String HELP_MESSAGE_FORMAT = "%s - %s\n";
     private static String QUIT_MESSAGE = "Bye.";
-
     private static Game game;
 
     public static void main(String[] args) {
@@ -41,6 +41,7 @@ public class Main {
                     in.nextLine();
                 }
                 case STATUS -> {
+                    status();
                     in.nextLine();
                 }
                 case MAP -> {
@@ -66,6 +67,45 @@ public class Main {
                 }
             }
     }
+
+    private static void status(){
+        Array<Array<String>> array = game.status();
+        for(int i = 0; i < 3; i++){
+            switch (i) {
+                case 0 -> printDimensions(array.get(i));
+                case 1 -> printBunkers(array.get(i));
+                case 2 -> printTeams(array.get(i));
+            }
+        }
+    }
+
+    
+
+    private static void printTeams(Array<String> array) {
+
+        int size = array.size();
+        System.out.printf("%d teams:\n", size);
+
+        for(int i = 0; i < size; i++){
+            String format = (i == size-1) ? "%s\n" : "%s; ";
+            System.out.printf(format, array.get(i), array.get(i+1));
+        } 
+    }
+
+    private static void printBunkers(Array<String> array) {
+        int size = array.size()/2;
+        System.out.printf("%d bunkers:\n", size);
+
+        for(int i = 0; i < size; i++){
+            System.out.printf("%s (%s)\n", array.get(i*2), array.get((i*2)+1));
+        }
+        
+    }
+
+    private static void printDimensions(Array<String> array) {
+        System.out.printf("%s %s\n", array.get(0), array.get(1));
+    }
+    
 
     private static void initGame(Scanner in) {
         int width = in.nextInt();
@@ -128,7 +168,7 @@ public class Main {
     
     private static Command getCommand(Scanner in){
             try{
-                String prompt = (game==null) ? "> " : "teamName> ";
+                String prompt = (game==null) ? "> " : String.format("%s> ", game.getTurnTeamName());
                 System.out.print(prompt);
 
                 String input = in.next().toUpperCase();
