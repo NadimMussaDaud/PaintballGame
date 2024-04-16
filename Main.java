@@ -45,6 +45,7 @@ public class Main {
                     in.nextLine();
                 }
                 case MAP -> {
+                    printMap();
                     in.nextLine();
                 }
                 case BUNKERS -> {
@@ -66,6 +67,29 @@ public class Main {
                     in.nextLine();
                 }
             }
+    }
+
+    private static void printMap() {
+        String[][] map = game.map();
+        int width = map.length;
+        int height = map[0].length;
+        System.out.printf("%d %d\n", width-1, height-1);
+        
+        //Prints the colummns indexes
+        System.out.print("**");
+        for(int i=1; i <= width-1; i++){
+            System.out.printf("%d ", i);
+        }
+        System.out.println();
+
+        for(int i = 1; i < height; i++){
+            System.out.printf("%d ",i);
+            for(int j = 1; j < width; j++){
+                System.out.printf("%s ", map[j][i]);
+            }
+            System.out.println();
+        }
+
     }
 
     private static void status(){

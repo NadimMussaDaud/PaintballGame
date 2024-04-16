@@ -22,7 +22,7 @@ public class GameClass implements Game{
         this.bunkersNumber = bunkersNumber;
         bunkers = new ArrayClass<>(bunkersNumber);
         teams = new ArrayClass<>(teamsNumber);
-        map = new BunkerClass[width+1][height+1];
+        map = new BunkerClass[width+1][height+1];//(0,0) not used
         teamTurns = new LinkedList<>();
     }
 
@@ -76,6 +76,7 @@ public class GameClass implements Game{
         dim.insertLast(String.valueOf(width)); dim.insertLast(String.valueOf(height));
 
         //Bunkers
+        //TODO: Ver addTeam() em bunker
         Iterator<Bunker> itB = this.bunkers.iterator(); 
         while(itB.hasNext()){
             String b = itB.next().getName();
@@ -109,7 +110,67 @@ public class GameClass implements Game{
         return false;
     }
 
+    public String[][] map(){
+        String[][] mapStrings = new String[width+1][height+1];
+        for(int x = 1; x < width+1; x++ ){
+            for(int y = 1; y < height+1; y++){
+               Player p = getPlayer(x,y);
+               if(isEmpty(x, y)){
+                    mapStrings[x][y] = ".";
+               }
+               else if(bunkerIn(x,y)){
+                    Bunker b = map[x][y];
+                    if(getTeam(getTurnTeamName()).getBunker().equals(b.getName())){
+                        if(b.isFree()){
+                            mapStrings[x][y] = "B";
+                        }else
+                        {
+                            mapStrings[x][y] = "O";
+                        }
+                    }else
+                        {
+                            mapStrings[x][y] = ".";
+                        }
+               }
+               
+               else if( p != null){
+                    if(p.getTeam().equals(getTurnTeamName())){
+                        mapStrings[x][y] = "P";
+                    }
+               }
+            }
+        }
+        return mapStrings;
+    }
+
     
+    private Team getTeam(String team) {
+        Iterator<Team> it = teams.iterator();
+        while(it.hasNext()){
+            Team t = it.next();
+            if(t.getName().equals(team))
+                return t;
+        }
+        return null;
+    }
+
+    private Player getPlayer(int x, int y) {
+        Iterator<Team> itT = teams.iterator();
+
+        while(itT.hasNext()){
+            Iterator<Player> itP = itT.next().getPlayers();
+            while(itP.hasNext()){
+                Player p = itP.next();
+                if(p.getX() == x && p.getY() == y)
+                    return p;
+            }
+        }
+        return null;
+    }
+
+    private boolean bunkerIn(int x, int y) {
+        return !isEmpty(x, y);
+    }
 
     @Override
     public boolean canPlay() {
@@ -132,6 +193,7 @@ public class GameClass implements Game{
         teamTurns.add(team);
     }
 
+    //TODO: Ver addTeam() em Bunker
     private String getBunkersOwner(String bunker){
         Iterator<Team> it = teams.iterator();
         String owner = "without owner";
