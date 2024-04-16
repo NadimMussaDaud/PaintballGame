@@ -33,7 +33,7 @@ public class GameClass implements Game{
     }
 
     public void addTeam(String name, String bunker){
-        teams.insertLast(new TeamClass(name, bunker));
+        teams.insertLast(new TeamClass(name, getBunker(bunker)));
         teamTurns.add(name);
     }
 
@@ -61,6 +61,10 @@ public class GameClass implements Game{
             }
         }
         return false;
+    }
+
+    public Array<Bunker> teamBunkers(){
+        return getTeam(getTurnTeamName()).getBunkers();
     }
 
     public Array<Array<String>> status(){
@@ -191,6 +195,16 @@ public class GameClass implements Game{
     private void changeTurns(){
         String team = teamTurns.remove();
         teamTurns.add(team);
+    }
+
+    private Bunker getBunker(String name){
+        Iterator<Bunker> it = bunkers.iterator();
+        while(it.hasNext()){
+            Bunker b = it.next();
+            if(b.getName().equals(name))
+                return b;
+        }
+        return null;
     }
 
     //TODO: Ver addTeam() em Bunker

@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import dataStructures.Array;
+import dataStructures.Iterator;
 
 public class Main {
 
@@ -49,6 +50,7 @@ public class Main {
                     in.nextLine();
                 }
                 case BUNKERS -> {
+                    bunkers();
                     in.nextLine();
                 }
                 case PLAYERS -> {
@@ -103,6 +105,17 @@ public class Main {
         }
     }
 
+    private static void bunkers(){
+        Array<Bunker> bunkers = game.teamBunkers();
+        Iterator<Bunker> it = bunkers.iterator();
+        System.out.printf("%d bunkers:\n", bunkers.size());
+
+        while (it.hasNext()) {
+            Bunker b = it.next();
+            System.out.printf("%s with %d coins in position (%d,%d)\n", b.getName(),b.getTreasure(), b.getX(), b.getY());
+        }
+
+    }
     
 
     private static void printTeams(Array<String> array) {

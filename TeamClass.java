@@ -4,13 +4,14 @@ import dataStructures.Iterator;
 
 public class TeamClass implements Team{
     
-    private String name, bunker;
+    private String name;
     private Array<Player> players;
-
-    public TeamClass(String name, String bunker){
-        this.bunker = bunker;
+    private Array<Bunker> bunkers;
+    public TeamClass(String name, Bunker bunker){
         this.name = name;
         this.players = new ArrayClass<>();
+        this.bunkers = new ArrayClass<>();
+        bunkers.insertLast(bunker);
     }
 
     @Override
@@ -20,11 +21,19 @@ public class TeamClass implements Team{
 
     @Override
     public String getBunker() {
-        return bunker;
+        return bunkers.get(bunkers.size()-1).getName();
     }
 
     public Iterator<Player> getPlayers(){
         return players.iterator();
+    }
+
+    public void addBunker(Bunker b){
+        bunkers.insertLast(b);
+    }
+
+    public Array<Bunker> getBunkers(){
+        return bunkers;
     }
 
 }

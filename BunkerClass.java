@@ -30,9 +30,24 @@ public class BunkerClass implements Bunker {
         return name;
     }
 
+    public int getTreasure(){
+        return treasure;
+    }
 
     @Override
     public boolean isFree(){
         return team.equals(NO_OWNER);
+    }
+
+
+    @Override
+    public int getX() {
+        return x;
+    }
+
+
+    @Override
+    public int getY() {
+        return y;
     }
 }

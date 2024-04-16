@@ -1,7 +1,10 @@
 
 public interface Bunker {
-    public void addTeam(String team);
-    public String getName();
-    public String getTeam();
-    public boolean isFree();
+    void addTeam(String team);
+    String getName();
+    String getTeam();
+    boolean isFree();
+    int getTreasure();
+    int getX();
+    int getY();
 }

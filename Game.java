@@ -12,4 +12,5 @@ public interface Game {
     String getTurnTeamName();
     Array<Array<String>> status();
     String[][] map();
+    Array<Bunker> teamBunkers();
 }
