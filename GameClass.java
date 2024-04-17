@@ -9,6 +9,9 @@ import dataStructures.Iterator;
 public class GameClass implements Game{
 
 
+    private static final String GREEN = "green";
+    private static final String BLUE = "blue";
+    private static final String RED = "red";
     private int teamsNumber, width, height, bunkersNumber;
     private Bunker[][] map;
     private Array<Bunker> bunkers;
@@ -35,6 +38,7 @@ public class GameClass implements Game{
     public void addTeam(String name, String bunker){
         teams.insertLast(new TeamClass(name, getBunker(bunker)));
         teamTurns.add(name);
+        getBunker(bunker).addTeam(name);
     }
 
     // TODO: Refazer o metodo. Fazer com que receba posições e verifique no mapa
@@ -102,12 +106,36 @@ public class GameClass implements Game{
         return teamTurns.peek();
     }
 
+    /**
+     * @Pre-conditions: @param type.equals(GREEN||BLUE||RED)
+     */
+    public void create(String bunker, String type){
+        Bunker b = getBunker(bunker);
+        Team team = getTeam(b.getTeam());
+        Player p = null;
+        
+        switch (type) {
+            case GREEN -> {
+                p = new GreenPlayer(team.getName(), b.getX(), b.getY());
+            }
+            case BLUE -> {
+                p = new BluePlayer(team.getName(), b.getX(), b.getY());
+            }
+            case RED -> {
+                p = new RedPlayer(team.getName(), b.getX(), b.getY());
+            }
+        }
+        team.addPlayer(p);
+        b.decreaseTreasure(p.cost());  
+    }
+
 
     @Override
     public boolean isOccupiedBunker(String bunker) {
         Iterator<Team> it = teams.iterator();
         while(it.hasNext()){
-            if (it.next().getBunker().equals(bunker)) {
+            Team t = it.next();
+            if (t.getBunker().equals(bunker) && t.hasPlayers()) {
                 return true;
             }
         }
@@ -146,6 +174,7 @@ public class GameClass implements Game{
         }
         return mapStrings;
     }
+
 
     
     private Team getTeam(String team) {
@@ -192,9 +221,17 @@ public class GameClass implements Game{
         return count;
     }
 
-    private void changeTurns(){
+    public void changeTurns(){
         String team = teamTurns.remove();
         teamTurns.add(team);
+        //adds 1 Coin to all bunkers
+        addCoin();
+    }
+
+    private void addCoin() {
+        Iterator<Bunker> it = bunkers.iterator();
+        while(it.hasNext())
+            it.next().increaseTreasure();
     }
 
     private Bunker getBunker(String name){
@@ -218,5 +255,21 @@ public class GameClass implements Game{
                 owner = t.getName();
         }
         return owner;
+    }
+
+    @Override
+    public boolean belongsTo(String bunker, String team) {
+        return getTeam(team).getBunker().equals(bunker);
+    }
+
+    @Override
+    public boolean hasFunds(String bunker, String type) {
+        int price = 0;
+        switch (type) {
+            case RED -> price = RedPlayer.COST;
+            case BLUE -> price = BluePlayer.COST;
+            case GREEN -> price = GreenPlayer.COST;
+        }
+        return getBunker(bunker).getTreasure() >= price;
     }
 }

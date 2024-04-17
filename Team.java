@@ -8,4 +8,6 @@ public interface Team {
     String getBunker();
     void addBunker(Bunker b);
     Array<Bunker> getBunkers();
+    void addPlayer(Player p);
+    boolean hasPlayers();
 }

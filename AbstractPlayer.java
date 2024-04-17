@@ -1,7 +1,7 @@
-public abstract class AbstractPlayer {
+abstract class AbstractPlayer implements Player{
 
-    private String team;
-    private int x, y;
+    protected String team;
+    protected int x, y;
 
     AbstractPlayer(String team, int x, int y){
         this.team = team;
@@ -20,4 +20,6 @@ public abstract class AbstractPlayer {
     public int getY(){
         return y;
     }
+
+    public abstract int cost();
 }

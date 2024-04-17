@@ -1,5 +1,4 @@
 import dataStructures.Array;
-import dataStructures.Iterator;
 
 public interface Game {
     void addBunker(int x, int y, int treasure, String name);
@@ -13,4 +12,8 @@ public interface Game {
     Array<Array<String>> status();
     String[][] map();
     Array<Bunker> teamBunkers();
+    boolean belongsTo(String bunker, String turnTeamName);
+    boolean hasFunds(String bunker, String type);
+    void create(String bunker, String type);
+    void changeTurns();
 }

@@ -7,4 +7,6 @@ public interface Bunker {
     int getTreasure();
     int getX();
     int getY();
+    void decreaseTreasure(int cost);
+    void increaseTreasure();
 }

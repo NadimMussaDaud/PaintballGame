@@ -36,4 +36,13 @@ public class TeamClass implements Team{
         return bunkers;
     }
 
+    public void addPlayer(Player p){
+        players.insertLast(p);
+    }
+
+    @Override
+    public boolean hasPlayers() {
+        return players.size() > 0;
+    }
+
 }

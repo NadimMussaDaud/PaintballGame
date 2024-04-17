@@ -50,4 +50,17 @@ public class BunkerClass implements Bunker {
     public int getY() {
         return y;
     }
+
+
+    @Override
+    public void decreaseTreasure(int cost) {
+        treasure -= cost;
+        if(treasure < 0) treasure = 0;
+    }
+
+
+    @Override
+    public void increaseTreasure() {
+        treasure++;
+    }
 }

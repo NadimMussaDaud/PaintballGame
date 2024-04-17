@@ -4,12 +4,21 @@ import dataStructures.Iterator;
 
 public class Main {
 
+    private static String NO_COINS = "Insufficient coins for recruitment.";
+    private static String BUNKER_OCCUPIED = "Bunker not free.";
+    private static String BUNKER_ILLEGALY_INVADED = "Bunker illegally invaded";
+    private static String NON_EXISTENT_BUNKER = "Non-existent bunker.";
+    private static String NON_EXISTENT_PLAYER = "Non-existent player type.";
     private static String FATAL_ERROR = "FATAL ERROR: Insufficient number of teams.";
     private static String INVALID_TEAM = "Team not created.";
     private static String INVALID_BUNKER = "Bunker not created.";
     private static String INVALID_COMMAND = "Invalid Command";
     private static String HELP_MESSAGE_FORMAT = "%s - %s\n";
     private static String QUIT_MESSAGE = "Bye.";
+    private static String PLAYER_CREATED = "%s player created in %s\n";
+    private static String RED = "red";
+    private static String BLUE = "blue";
+    private static String GREEN = "green";
     private static Game game;
 
     public static void main(String[] args) {
@@ -36,7 +45,7 @@ public class Main {
                     in.nextLine();
                 }
                 case CREATE -> {
-                    in.nextLine();
+                    create(in);
                 }
                 case ATTACK -> {
                     in.nextLine();
@@ -69,6 +78,34 @@ public class Main {
                     in.nextLine();
                 }
             }
+    }
+
+    private static void create(Scanner in) {
+        String type = in.next();
+        String bunker = in.nextLine().trim();
+
+        if(!type.equals(GREEN) && !type.equals(BLUE) && !type.equals(RED)){
+            System.out.println(NON_EXISTENT_PLAYER);
+        }
+        else if(!game.hasBunker(bunker)){
+            System.out.println(NON_EXISTENT_BUNKER);
+        }else if(!game.belongsTo(bunker,game.getTurnTeamName())){
+            System.out.println(BUNKER_ILLEGALY_INVADED);
+        }
+        else if(game.isOccupiedBunker(bunker)){
+            System.out.println(BUNKER_OCCUPIED);
+        }
+        else if(!game.hasFunds(bunker,type)){
+            System.out.println(NO_COINS);
+        }else
+        {
+            game.create(bunker, type);
+            System.out.printf(PLAYER_CREATED,type,bunker);
+        }
+    
+        game.changeTurns();
+        
+        
     }
 
     private static void printMap() {
