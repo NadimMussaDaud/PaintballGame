@@ -4,4 +4,5 @@ public interface Player {
     int getX();
     int getY();
     abstract int cost();
+    abstract String getType();
 }

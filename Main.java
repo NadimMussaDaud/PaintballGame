@@ -16,6 +16,9 @@ public class Main {
     private static String HELP_MESSAGE_FORMAT = "%s - %s\n";
     private static String QUIT_MESSAGE = "Bye.";
     private static String PLAYER_CREATED = "%s player created in %s\n";
+    private static String PLAYER_INFO = "%s player in position (%d,%d)\n";
+    private static String PLAYER_FORMAT = "%d players:\n" ;
+    private static String NO_PLAYERS = "Without players.";
     private static String RED = "red";
     private static String BLUE = "blue";
     private static String GREEN = "green";
@@ -63,6 +66,7 @@ public class Main {
                     in.nextLine();
                 }
                 case PLAYERS -> {
+                    players();
                     in.nextLine();
                 }
                 case HELP -> {
@@ -80,6 +84,20 @@ public class Main {
             }
     }
 
+    private static void players() {
+        Array<Player> array = game.players();
+        int size = array.size();
+        if(size > 0){
+            System.out.printf(PLAYER_FORMAT, size);
+            Iterator<Player> it = game.players().iterator();
+            while (it.hasNext()) {
+                Player p = it.next();
+                System.out.printf(PLAYER_INFO,p.getType(), p.getX(), p.getY());
+            }
+        }else 
+            System.out.println(NO_PLAYERS);
+    }
+
     private static void create(Scanner in) {
         String type = in.next();
         String bunker = in.nextLine().trim();
@@ -89,7 +107,7 @@ public class Main {
         }
         else if(!game.hasBunker(bunker)){
             System.out.println(NON_EXISTENT_BUNKER);
-        }else if(!game.belongsTo(bunker,game.getTurnTeamName())){
+        }else if(!game.belongsTo(bunker)){
             System.out.println(BUNKER_ILLEGALY_INVADED);
         }
         else if(game.isOccupiedBunker(bunker)){

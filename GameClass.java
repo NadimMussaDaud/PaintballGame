@@ -258,8 +258,8 @@ public class GameClass implements Game{
     }
 
     @Override
-    public boolean belongsTo(String bunker, String team) {
-        return getTeam(team).getBunker().equals(bunker);
+    public boolean belongsTo(String bunker) {
+        return getTeam(getTurnTeamName()).getBunker().equals(bunker);
     }
 
     @Override
@@ -271,5 +271,16 @@ public class GameClass implements Game{
             case GREEN -> price = GreenPlayer.COST;
         }
         return getBunker(bunker).getTreasure() >= price;
+    }
+
+    @Override
+    public Array<Player> players() {
+        Array<Player> array = new ArrayClass<>();
+        Iterator<Player> it = getTeam(getTurnTeamName()).getPlayers();
+
+        while(it.hasNext()){
+            array.insertLast(it.next());
+        }
+        return array;
     }
 }

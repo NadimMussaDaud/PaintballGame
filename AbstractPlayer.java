@@ -22,4 +22,5 @@ abstract class AbstractPlayer implements Player{
     }
 
     public abstract int cost();
+    public abstract String getType();
 }
