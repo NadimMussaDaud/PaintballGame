@@ -155,12 +155,13 @@ public class GameClass implements Game{
                if(isEmpty(x, y)){
                     mapStrings[x][y] = ".";
                }
-               else if(bunkerIn(x,y)){
+               else if(bunkerIn(x,y) && !hasPlayer(x, y)){
                     Bunker b = map[x][y];
-                    if(getTeam(getTurnTeamName()).getBunker().equals(b.getName())){
-                        if(b.isFree()){
+                    if(getTeam(getTurnTeamName()).hasBunker(b)){ 
+                        if(!isOccupiedBunker(b.getName())){
                             mapStrings[x][y] = "B";
-                        }else
+                        }
+                        else
                         {
                             mapStrings[x][y] = "O";
                         }
@@ -397,7 +398,7 @@ public class GameClass implements Game{
                 return String.format("Won the fight.\n%s player in position (%d, %d)",p.getType(),p.getX(),p.getY());
             }else{
                 changeTurns();
-            return "Player eliminated";
+            return "Player eliminated.";
             }
         } else {
         p.move(dir); // empty map position
