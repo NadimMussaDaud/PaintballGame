@@ -9,9 +9,14 @@ import dataStructures.Iterator;
 public class GameClass implements Game{
 
 
-    private static final String GREEN = "green";
-    private static final String BLUE = "blue";
-    private static final String RED = "red";
+    public static final String GREEN = "green";
+    public static final String BLUE = "blue";
+    public static final String RED = "red";
+    public static final String NORTH = "north";
+    public static final String SOUTH = "south";
+    public static final String WEST = "west";
+    public static final String EAST = "east";
+
     private int teamsNumber, width, height, bunkersNumber;
     private Bunker[][] map;
     private Array<Bunker> bunkers;
@@ -25,7 +30,7 @@ public class GameClass implements Game{
         this.bunkersNumber = bunkersNumber;
         bunkers = new ArrayClass<>(bunkersNumber);
         teams = new ArrayClass<>(teamsNumber);
-        map = new BunkerClass[width+1][height+1];//(0,0) not used
+        map = new BunkerClass[width+1][height+1]; //(0,0) not used
         teamTurns = new LinkedList<>();
     }
 
@@ -132,12 +137,12 @@ public class GameClass implements Game{
 
     @Override
     public boolean isOccupiedBunker(String bunker) {
-        Iterator<Team> it = teams.iterator();
-        while(it.hasNext()){
-            Team t = it.next();
-            if (t.getBunker().equals(bunker) && t.hasPlayers()) {
+        Bunker b = getBunker(bunker);
+        Player p = getPlayer(b.getX(),b.getY());
+
+        if(p != null){
+            if(getTeam(p.getTeam()).hasBunker(b))
                 return true;
-            }
         }
         return false;
     }
@@ -176,7 +181,10 @@ public class GameClass implements Game{
     }
 
 
-    
+    public boolean hasPlayer(int x, int y){
+        return getPlayer(x, y) != null;
+    }
+
     private Team getTeam(String team) {
         Iterator<Team> it = teams.iterator();
         while(it.hasNext()){
@@ -187,7 +195,7 @@ public class GameClass implements Game{
         return null;
     }
 
-    private Player getPlayer(int x, int y) {
+    public Player getPlayer(int x, int y) {
         Iterator<Team> itT = teams.iterator();
 
         while(itT.hasNext()){
@@ -207,7 +215,7 @@ public class GameClass implements Game{
 
     @Override
     public boolean canPlay() {
-        return teamsCreated() > 2;
+        return teamsCreated() > 1;
     }
 
     private int teamsCreated(){
@@ -259,7 +267,7 @@ public class GameClass implements Game{
 
     @Override
     public boolean belongsTo(String bunker) {
-        return getTeam(getTurnTeamName()).getBunker().equals(bunker);
+        return getTeam(getTurnTeamName()).hasBunker(getBunker(bunker));
     }
 
     @Override
@@ -283,4 +291,182 @@ public class GameClass implements Game{
         }
         return array;
     }
+
+    @Override
+    public boolean isPosition(int x, int y) {
+        return  (x > 0 && x <= width && y > 0 && y <= height);
+    }
+
+    
+    @Override
+    public boolean isMovingOff(int x, int y,String direction) {
+        int totalX  = x, totalY = y;
+
+            switch (direction) {
+                case NORTH -> totalY --;
+                case WEST -> totalX --;
+                case EAST -> totalX ++;
+                case SOUTH -> totalY ++;
+            }
+        
+        return !isPosition(totalX, totalY);
+    }
+
+    @Override
+    public boolean isFreePosition(int x, int y, String direction) {
+        int totalX  = x, totalY = y;
+
+            switch (direction) {
+                case NORTH -> totalY --;
+                case WEST -> totalX --;
+                case EAST -> totalX ++;
+                case SOUTH -> totalY ++;
+            }
+        Player p = getPlayer(totalX, totalY);
+        if (p != null){
+            return !getPlayer(totalX, totalY).getTeam().equals(getPlayer(x, y).getTeam());
+        }
+        return true;
+    }
+
+    @Override
+    public String move(Player p,String dir) {
+        int x = p.getX();
+        int y = p.getY();
+        
+        int totalX  = x, totalY = y;
+
+            switch (dir) {
+                case NORTH -> totalY --;
+                case WEST -> totalX --;
+                case EAST -> totalX ++;
+                case SOUTH -> totalY ++;
+            }
+        
+
+        if(bunkerIn(totalX, totalY)){ // map position with bunker
+            Bunker b = map[totalX][totalY];
+            
+            //TODO: VER o que é um bunker estar Free
+            // se é sem pessoas ou sem team...
+//se não for um bunker da equipa do jogador
+            if(!isOccupiedBunker(b.getName()) && !getTeam(p.getTeam()).hasBunker(b) ){ // free bunker from another team
+                //Bunker seized
+                
+                //TODO: (IMPORTANTE) Verificar bunker atraves da teams e não do bunker directamente
+                
+                Team oldTeam = getTeam(b.getTeam());
+                
+                getTeam(p.getTeam()).addBunker(b);
+                b.addTeam(p.getTeam());
+                
+                if(oldTeam != null){
+                    oldTeam.removeBunker(b);
+                    if(!oldTeam.hasPlayers() && !oldTeam.hasBunkers()){
+                        removeTeam(oldTeam);
+                    }
+                }
+
+                changeTurns();
+                p.move(dir);
+                return String.format("Bunker seized.\n%s player in position (%d, %d)",p.getType(),p.getX(),p.getY());
+            }
+            else if(!getTeam(getTurnTeamName()).hasBunker(b)){ // occupied bunker
+                Player defender = getPlayer(totalX, totalY);
+                Player winner = fight(defender,p);
+                // seize the opponents bunker
+                if(winner.equals(p)){
+                    getTeam(p.getTeam()).addBunker(b);
+                    b.addTeam(p.getTeam());
+                    changeTurns();
+                    return "Won the fight and bunker seized.";
+                }else{
+                    changeTurns();
+                    return "Player eliminated.";
+                }
+            } else { // free bunker from player's team
+                p.move(dir); 
+                changeTurns();
+                return String.format("%s player in position (%d, %d)",p.getType(),p.getX(),p.getY());
+            }
+        }else if(hasPlayer(totalX, totalY)){ // map position with player
+            Player winner = fight(getPlayer(totalX, totalY),p);
+            if(winner.equals(p)){
+                p.move(dir);
+                changeTurns();
+                return String.format("Won the fight.\n%s player in position (%d, %d)",p.getType(),p.getX(),p.getY());
+            }else{
+                changeTurns();
+            return "Player eliminated";
+            }
+        } else {
+        p.move(dir); // empty map position
+        changeTurns();
+        return String.format("%s player in position (%d, %d)",p.getType(),p.getX(),p.getY());
+        }
+    }
+
+    /**
+     * 
+     * @param defender
+     * @param attacker
+     * @return the winner
+     */
+    private Player fight(Player defender, Player attacker) {
+        String attackerType = attacker.getType();
+        String defenderType = defender.getType();
+
+        if(attackerType.equals(RED)){
+            if(defenderType.equals(BLUE)){
+                removePlayer(defender);
+                return attacker;
+            }else if(defenderType.equals(GREEN)){
+                removePlayer(attacker);
+                return defender;
+            }
+        }else if(attackerType.equals(GREEN)){
+            if(defenderType.equals(RED)){
+                removePlayer(defender);
+                return attacker;
+          } else if(defenderType.equals(BLUE)){
+                removePlayer(attacker);
+                return defender;
+          } 
+        }else if(attackerType.equals(BLUE)){
+            if(defenderType.equals(RED)){
+                removePlayer(attacker);
+                return defender;
+            } else if(defenderType.equals(GREEN)){
+                removePlayer(defender);
+                return attacker;
+            } 
+        }
+        removePlayer(defender);
+        return attacker;
+    }
+
+
+    private void removePlayer(Player loser) {
+        Team team = getTeam(loser.getTeam());
+        team.removeMember(loser);
+        
+        if(!team.hasPlayers() && !team.hasBunkers()){
+            removeTeam(team);
+        }  
+    }
+
+    private void removeTeam(Team team) {
+        teamTurns.remove(team);
+        teams.removeAt(teams.searchIndexOf(team));
+    }
+    //Uma equipa é ativa se tiver bunkers em seu nome OU se tiver jogadores
+
+    private void won(){
+        int activeTeams;
+        Iterator<Team> it = teams.iterator();
+        while(it.hasNext()){
+            Team t = it.next();
+        }
+    }
+        
 }

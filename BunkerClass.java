@@ -7,6 +7,7 @@ public class BunkerClass implements Bunker {
     private int x, y;
     private int treasure;
     private String team;
+    
 
     public BunkerClass(int x, int y, int treasure, String name){
         this.team = NO_OWNER;

@@ -10,4 +10,8 @@ public interface Team {
     Array<Bunker> getBunkers();
     void addPlayer(Player p);
     boolean hasPlayers();
+    void removeMember(Player loser);
+    boolean hasBunkers();
+    void removeBunker(Bunker b);
+    boolean hasBunker(Bunker bunker);
 }

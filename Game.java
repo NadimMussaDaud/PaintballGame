@@ -1,5 +1,4 @@
 import dataStructures.Array;
-import dataStructures.Iterator;
 
 public interface Game {
     void addBunker(int x, int y, int treasure, String name);
@@ -18,4 +17,10 @@ public interface Game {
     void create(String bunker, String type);
     void changeTurns();
     Array<Player> players();
+    boolean isPosition(int x, int y);
+    boolean hasPlayer(int x, int y);
+    boolean isMovingOff(int x, int y, String direction);
+    boolean isFreePosition(int x, int y,String direction);
+    Player getPlayer(int x,int y);
+    String move(Player p, String dir);
 }

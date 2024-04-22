@@ -1,10 +1,22 @@
 import java.util.Scanner;
 import dataStructures.Array;
+import dataStructures.ArrayClass;
 import dataStructures.Iterator;
 
 public class Main {
 
-    private static String NO_COINS = "Insufficient coins for recruitment.";
+    private static final String INVALID_POSITION = "Invalid Position.";
+    private static final String INVALID_DIRECTION = "Invalid direction.";
+    private static final String EMPTY = "";
+    private static final String SOUTH = GameClass.SOUTH;
+    private static final String EAST = GameClass.EAST;
+    private static final String NORTH = GameClass.NORTH;
+    private static final String WEST = GameClass.WEST;
+    private static final String NO_COINS = "Insufficient coins for recruitment.";
+    private static final String NO_PLAYER = "No player in that position.";
+    private static final String INVALID_MOVE = "Invalid move.";
+    private static final String MOVING_OFF = "Trying to move off the map.";
+    private static final String OCCUPIED_POSITION = "Position occupied.";
     private static String BUNKER_OCCUPIED = "Bunker not free.";
     private static String BUNKER_ILLEGALY_INVADED = "Bunker illegally invaded";
     private static String NON_EXISTENT_BUNKER = "Non-existent bunker.";
@@ -16,12 +28,13 @@ public class Main {
     private static String HELP_MESSAGE_FORMAT = "%s - %s\n";
     private static String QUIT_MESSAGE = "Bye.";
     private static String PLAYER_CREATED = "%s player created in %s\n";
-    private static String PLAYER_INFO = "%s player in position (%d,%d)\n";
+    private static String PLAYER_INFO = "%s player in position (%d, %d)\n";
     private static String PLAYER_FORMAT = "%d players:\n" ;
     private static String NO_PLAYERS = "Without players.";
-    private static String RED = "red";
-    private static String BLUE = "blue";
-    private static String GREEN = "green";
+    private static final String NO_BUNKERS = "Without bunkers.";
+    private static String RED = GameClass.RED;
+    private static String BLUE = GameClass.BLUE;
+    private static String GREEN = GameClass.GREEN;
     private static Game game;
 
     public static void main(String[] args) {
@@ -45,7 +58,8 @@ public class Main {
                     initGame(in);
                 }
                 case MOVE -> {
-                    in.nextLine();
+                    move(in);
+                    //in.nextLine();
                 }
                 case CREATE -> {
                     create(in);
@@ -82,6 +96,60 @@ public class Main {
                     in.nextLine();
                 }
             }
+    }
+
+    private static void move(Scanner in) {
+        int x = in.nextInt();
+        int y = in.nextInt();
+        Player p = game.getPlayer(x, y);
+        String dir1 = in.next();
+        Array<String> directions = new ArrayClass<>();
+        directions.insertLast(dir1);
+        
+        String dir2,dir3;
+        String dir23 = in.nextLine().trim(); //Maybe empty if type is NOT RED
+        boolean hasDir23 = !dir23.equals(EMPTY);
+        boolean isDir123 = isDirection(dir1);
+
+        if(hasDir23){
+            dir2 = dir23.split(" ")[0];
+            dir3 = dir23.split(" ")[1];
+            isDir123 = isDirection(dir1) && isDirection(dir2) && isDirection(dir3);
+
+            directions.insertLast(dir2);
+            directions.insertLast(dir3);
+        }
+
+        if(!game.isPosition(x,y)){
+            System.out.println(INVALID_POSITION);
+        } else if(!isDir123){
+            System.out.println(INVALID_DIRECTION);
+        } else if(!game.hasPlayer(x,y)){
+            System.out.println(NO_PLAYER);
+        } else if(!p.getType().equals(RED) && hasDir23){
+            System.out.println(INVALID_MOVE);
+        } else if(game.isMovingOff(x,y, dir1)){
+            System.out.println(MOVING_OFF);
+        } else if(!p.getType().equals(RED) && !game.isFreePosition(x,y,dir1)){
+            System.out.println(OCCUPIED_POSITION);
+        }else{
+            Iterator<String> it = directions.iterator();
+            while(it.hasNext()){
+                String dir = it.next();
+                if(!game.isMovingOff(p.getX(), p.getY(),dir)){
+                    if(game.isFreePosition(p.getX(), p.getY(), dir)){
+                        
+                        System.out.println(game.move(p, dir));
+                
+                    }else
+                         System.out.println(OCCUPIED_POSITION);
+                }else
+                     System.out.println(MOVING_OFF);
+                
+                
+
+            }
+        }
     }
 
     private static void players() {
@@ -163,11 +231,16 @@ public class Main {
     private static void bunkers(){
         Array<Bunker> bunkers = game.teamBunkers();
         Iterator<Bunker> it = bunkers.iterator();
-        System.out.printf("%d bunkers:\n", bunkers.size());
+        
+        if(it.hasNext()){
+            System.out.printf("%d bunkers:\n", bunkers.size());
 
-        while (it.hasNext()) {
-            Bunker b = it.next();
-            System.out.printf("%s with %d coins in position (%d,%d)\n", b.getName(),b.getTreasure(), b.getX(), b.getY());
+            while (it.hasNext()) {
+                Bunker b = it.next();
+                System.out.printf("%s with %d coins in position (%d,%d)\n", b.getName(),b.getTreasure(), b.getX(), b.getY());
+            }
+        }else{
+            System.out.println(NO_BUNKERS);
         }
 
     }
@@ -246,11 +319,12 @@ public class Main {
     }
 
     private static boolean validBunker(int width, int height,int x, int y, int treasure, String name) {
-        if ( x < 0 || x > width || y < 0 || y > height || treasure <= 0)
+        if ( !game.isPosition(x, y) || treasure <= 0){
             return false;
-        if( game.hasBunker(name) || !game.isEmpty(x,y) )
+        }
+        if( game.hasBunker(name) || !game.isEmpty(x,y) ){
             return false;
-
+        }
         return true;
     }
 
@@ -288,6 +362,10 @@ public class Main {
                 System.out.printf(HELP_MESSAGE_FORMAT,c.getName(),c.getMessage());
             }
         }
+    }
+
+    private static boolean isDirection(String dir){
+        return (dir.equals(SOUTH) || dir.equals(NORTH) || dir.equals(EAST) || dir.equals(WEST)); 
     }
 }
 

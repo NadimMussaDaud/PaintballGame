@@ -45,4 +45,24 @@ public class TeamClass implements Team{
         return players.size() > 0;
     }
 
+    @Override
+    public void removeMember(Player loser) {
+       players.removeAt(players.searchIndexOf(loser));
+    }
+
+    @Override
+    public boolean hasBunkers() {
+        return bunkers.size() > 0;
+    }
+
+    @Override
+    public void removeBunker(Bunker b) {
+        bunkers.removeAt(bunkers.searchIndexOf(b));
+    }
+
+    @Override
+    public boolean hasBunker(Bunker bunker) {
+        return bunkers.searchIndexOf(bunker) != -1;
+    }
+
 }
