@@ -59,12 +59,12 @@ public class Main {
                 }
                 case MOVE -> {
                     move(in);
-                    //in.nextLine();
                 }
                 case CREATE -> {
                     create(in);
                 }
                 case ATTACK -> {
+                    attack();
                     in.nextLine();
                 }
                 case STATUS -> {
@@ -96,6 +96,10 @@ public class Main {
                     in.nextLine();
                 }
             }
+    }
+
+    private static void attack() {
+        game.attack();
     }
 
     private static void move(Scanner in) {
@@ -133,6 +137,7 @@ public class Main {
         } else if(!p.getType().equals(RED) && !game.isFreePosition(x,y,dir1)){
             System.out.println(OCCUPIED_POSITION);
         }else{
+            /* 
             Iterator<String> it = directions.iterator();
             while(it.hasNext()){
                 String dir = it.next();
@@ -144,11 +149,11 @@ public class Main {
                     }else
                          System.out.println(OCCUPIED_POSITION);
                 }else
-                     System.out.println(MOVING_OFF);
-                
-                
-
-            }
+                     System.out.println(MOVING_OFF);}*/
+                    Iterator<String> it = game.move(p,directions);
+                    while (it.hasNext()) {
+                        System.out.println(it.next());
+                    }
         }
     }
 
