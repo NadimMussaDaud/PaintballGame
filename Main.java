@@ -17,28 +17,29 @@ public class Main {
     private static final String INVALID_MOVE = "Invalid move.";
     private static final String MOVING_OFF = "Trying to move off the map.";
     private static final String OCCUPIED_POSITION = "Position occupied.";
-    private static String BUNKER_OCCUPIED = "Bunker not free.";
-    private static String BUNKER_ILLEGALY_INVADED = "Bunker illegally invaded";
-    private static String NON_EXISTENT_BUNKER = "Non-existent bunker.";
-    private static String NON_EXISTENT_PLAYER = "Non-existent player type.";
-    private static String FATAL_ERROR = "FATAL ERROR: Insufficient number of teams.";
-    private static String INVALID_TEAM = "Team not created.";
-    private static String INVALID_BUNKER = "Bunker not created.";
-    private static String INVALID_COMMAND = "Invalid Command";
-    private static String HELP_MESSAGE_FORMAT = "%s - %s\n";
-    private static String QUIT_MESSAGE = "Bye.";
-    private static String PLAYER_CREATED = "%s player created in %s\n";
-    private static String PLAYER_INFO = "%s player in position (%d, %d)\n";
-    private static String PLAYER_FORMAT = "%d players:\n" ;
-    private static String NO_PLAYERS = "Without players.";
+    private static final String BUNKER_OCCUPIED = "Bunker not free.";
+    private static final String BUNKER_ILLEGALY_INVADED = "Bunker illegally invaded";
+    private static final String NON_EXISTENT_BUNKER = "Non-existent bunker.";
+    private static final String NON_EXISTENT_PLAYER = "Non-existent player type.";
+    private static final String FATAL_ERROR = "FATAL ERROR: Insufficient number of teams.";
+    private static final String INVALID_TEAM = "Team not created.";
+    private static final String INVALID_BUNKER = "Bunker not created.";
+    private static final String INVALID_COMMAND = "Invalid Command";
+    private static final String HELP_MESSAGE_FORMAT = "%s - %s\n";
+    private static final String QUIT_MESSAGE = "Bye.";
+    private static final String PLAYER_CREATED = "%s player created in %s\n";
+    private static final String PLAYER_INFO = "%s player in position (%d, %d)\n";
+    private static final String PLAYER_FORMAT = "%d players:\n" ;
+    private static final String NO_PLAYERS = "Without players.";
     private static final String NO_BUNKERS = "Without bunkers.";
-    private static String RED = GameClass.RED;
-    private static String BLUE = GameClass.BLUE;
-    private static String GREEN = GameClass.GREEN;
+    private static final String RED = GameClass.RED;
+    private static final String BLUE = GameClass.BLUE;
+    private static final String GREEN = GameClass.GREEN;
     private static Game game;
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        
         processCommands(in);
         in.close();
     }
@@ -99,7 +100,25 @@ public class Main {
     }
 
     private static void attack() {
-        game.attack();
+        String[][] map = game.attack();
+        int width = map.length;
+        int height = map[0].length;
+        System.out.printf("%d %d\n", width-1, height-1);
+        
+        //Prints the colummns indexes
+        System.out.print("**");
+        for(int i=1; i <= width-1; i++){
+            System.out.printf("%d ", i);
+        }
+        System.out.println();
+
+        for(int i = 1; i < height; i++){
+            System.out.printf("%d ",i);
+            for(int j = 1; j < width; j++){
+                System.out.printf("%s ", map[j][i]);
+            }
+            System.out.println();
+        }
     }
 
     private static void move(Scanner in) {

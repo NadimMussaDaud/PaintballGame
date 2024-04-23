@@ -474,7 +474,7 @@ public class GameClass implements Game{
     }
 
     @Override
-    public void attack() {
+    public String[][] attack() {
         Iterator<Player> it = getTeam(getTurnTeamName()).getPlayers();
 
         while(it.hasNext()){
@@ -485,10 +485,11 @@ public class GameClass implements Game{
                 case RED -> attackRed(p);
             }
         }
-        
+        String[][] map = map();
+        changeTurns();
+        return map;
     }
 
-    // 2 4 1
     private void attackBlue(Player p) {
         
         Array<Integer> coords = p.getAttackCoord(width, height);

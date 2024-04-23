@@ -24,5 +24,5 @@ public interface Game {
     boolean isFreePosition(int x, int y,String direction);
     Player getPlayer(int x,int y);
     Iterator<String> move(Player p, Array<String> dir);
-    void attack();
+    String[][] attack();
 }
