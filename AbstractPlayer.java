@@ -1,3 +1,5 @@
+import dataStructures.Array;
+
 abstract class AbstractPlayer implements Player{
 
     protected String team;
@@ -35,4 +37,5 @@ abstract class AbstractPlayer implements Player{
 
     public abstract int cost();
     public abstract String getType();
+    public abstract Array<Integer> getAttackCoord(int width, int height);
 }

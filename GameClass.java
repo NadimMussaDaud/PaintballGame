@@ -17,7 +17,7 @@ public class GameClass implements Game{
     public static final String WEST = "west";
     public static final String EAST = "east";
 
-    private int teamsNumber, width, height, bunkersNumber;
+    private int width, height;
     private Bunker[][] map;
     private Array<Bunker> bunkers;
     private Array<Team> teams;
@@ -26,8 +26,6 @@ public class GameClass implements Game{
     public GameClass(int width, int height, int teamsNumber, int bunkersNumber){
         this.width = width;
         this.height = height;
-        this.teamsNumber = teamsNumber;
-        this.bunkersNumber = bunkersNumber;
         bunkers = new ArrayClass<>(bunkersNumber);
         teams = new ArrayClass<>(teamsNumber);
         map = new BunkerClass[width+1][height+1]; //(0,0) not used
@@ -161,21 +159,24 @@ public class GameClass implements Game{
                         if(!isOccupiedBunker(b.getName())){
                             mapStrings[x][y] = "B";
                         }
-                        else
-                        {
+                        else 
+                        {   // equipa tem jogador em um dos bunkers capturados
                             mapStrings[x][y] = "O";
                         }
                     }else
                         {
                             mapStrings[x][y] = ".";
                         }
-               }
-               
-               if( p != null){
-                    if(p.getTeam().equals(getTurnTeamName()) && p.getX()==x && p.getY()==y){
-                        mapStrings[x][y] = "P";
-                    }
-               }
+
+                        if( p != null){
+                            if(p.getTeam().equals(getTurnTeamName()) && p.getX()==x && p.getY()==y){
+                                mapStrings[x][y] = "P";
+                            } else if(!getTeam(p.getTeam()).initialBunker().equals(b.getName()) && getTeam(p.getTeam()).hasBunker(b))
+                            {   // equipa tem jogador em um dos bunkers capturados
+                                mapStrings[x][y] = "O";
+                            }
+                       }
+               }    
             }
         }
         return mapStrings;
@@ -413,9 +414,11 @@ public class GameClass implements Game{
 
     /**
      * 
-     * @param defender
+     * @param defender 
      * @param attacker
      * @return the winner
+     * 
+     * The loser of the fight gets eliminated and in cas his teams doenst have any bunker and any player it is removed from the game
      */
     private Player fight(Player defender, Player attacker) {
         String attackerType = attacker.getType();
@@ -466,12 +469,8 @@ public class GameClass implements Game{
     }
     
     //Uma equipa é ativa se tiver bunkers em seu nome OU se tiver jogadores
-    private void won(){
-        int activeTeams;
-        Iterator<Team> it = teams.iterator();
-        while(it.hasNext()){
-            Team t = it.next();
-        }
+    private boolean won(){
+        return teams.size() == 1;
     }
 
     @Override
@@ -486,13 +485,19 @@ public class GameClass implements Game{
                 case RED -> attackRed(p);
             }
         }
+        
     }
 
+    // 2 4 1
     private void attackBlue(Player p) {
-        int x = p.getX();
+        
+        Array<Integer> coords = p.getAttackCoord(width, height);
 
-        for(int y = 1; y < width; y++){
-            if(y != p.getY()){
+        for(int i=0; i < coords.size()/2 ; i ++){
+            int x = coords.get(i);
+            int y = coords.get(i+1);
+        
+            if(p != null && y != p.getY()){ //pode ser eliminado no processo de ataque
                 if(bunkerIn(x, y)){ // map position with bunker
                     Bunker b = map[x][y];
     
@@ -514,14 +519,13 @@ public class GameClass implements Game{
                     else if(!getTeam(getTurnTeamName()).hasBunker(b)){ // occupied bunker
                         Player defender = getPlayer(x, y);
                         Player winner = fight(defender,p);
-                        // seize the opponents bunker
+                        // captures the opponents bunker
                         if(winner.equals(p)){
                             getTeam(p.getTeam()).addBunker(b);
                             b.addTeam(p.getTeam());
-                            changeTurns();
             
                         }else{
-                            changeTurns();
+
                             //return "Player eliminated.";
                         }
                     } else { // free bunker from player's team
@@ -533,25 +537,133 @@ public class GameClass implements Game{
                     if(winner.equals(p)){
                    
                     }else{
-                        changeTurns();
                     //return "Player eliminated.";
                     }
                 } else {
-                changeTurns();
                 
                 }
-            }
+            } 
         }
     }
 
     private void attackGreen(Player p) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'attackGreen'");
+
+        Array<Integer> coords = p.getAttackCoord(width, height);
+
+
+        for(int i=0; i < coords.size()/2 ; i ++){
+            int x = coords.get(i);
+            int y = coords.get(i+1);
+        
+            if(p != null && y != p.getY()){ //pode ser eliminado no processo de ataque
+                if(bunkerIn(x, y)){ // map position with bunker
+                    Bunker b = map[x][y];
+    
+                    if(!isOccupiedBunker(b.getName()) && !getTeam(p.getTeam()).hasBunker(b) ){ // free bunker from another team
+                        //Bunker seized
+                        
+                        Team oldTeam = getTeam(b.getTeam());
+                        
+                        getTeam(p.getTeam()).addBunker(b);
+                        b.addTeam(p.getTeam());
+                        
+                        if(oldTeam != null){
+                            oldTeam.removeBunker(b);
+                            if(!oldTeam.hasPlayers() && !oldTeam.hasBunkers()){
+                                removeTeam(oldTeam);
+                            }
+                        }
+                    }
+                    else if(!getTeam(getTurnTeamName()).hasBunker(b)){ // occupied bunker
+                        Player defender = getPlayer(x, y);
+                        Player winner = fight(defender,p);
+                        // captures the opponents bunker
+                        if(winner.equals(p)){
+                            getTeam(p.getTeam()).addBunker(b);
+                            b.addTeam(p.getTeam());
+            
+                        }else{
+
+                            //return "Player eliminated.";
+                        }
+                    } else { // free bunker from player's team
+            
+                    
+                    }
+                }else if(hasPlayer(x, y)){ // map position with player
+                    Player winner = fight(getPlayer(x, y),p);
+                    if(winner.equals(p)){
+                   
+                    }else{
+                    //return "Player eliminated.";
+                    }
+                } else {
+                
+                }
+            } 
+        }
+
     }
 
     private void attackRed(Player p) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'attackRed'");
+    
+        Array<Integer> coords = p.getAttackCoord(width, height);
+       
+        for(int i=0; i < coords.size()/2 ; i ++){
+            int x = coords.get(i);
+            int y = coords.get(i+1);
+        
+            if(p != null && y != p.getY()){ //pode ser eliminado no processo de ataque
+                if(bunkerIn(x, y)){ // map position with bunker
+                    Bunker b = map[x][y];
+    
+                    if(!isOccupiedBunker(b.getName()) && !getTeam(p.getTeam()).hasBunker(b) ){ // free bunker from another team
+                        //Bunker seized
+                        
+                        Team oldTeam = getTeam(b.getTeam());
+                        
+                        getTeam(p.getTeam()).addBunker(b);
+                        b.addTeam(p.getTeam());
+                        
+                        if(oldTeam != null){
+                            oldTeam.removeBunker(b);
+                            if(!oldTeam.hasPlayers() && !oldTeam.hasBunkers()){
+                                removeTeam(oldTeam);
+                            }
+                        }
+                    }
+                    else if(!getTeam(getTurnTeamName()).hasBunker(b)){ // occupied bunker
+                        Player defender = getPlayer(x, y);
+                        Player winner = fight(defender,p);
+                        // captures the opponents bunker
+                        if(winner.equals(p)){
+                            getTeam(p.getTeam()).addBunker(b);
+                            b.addTeam(p.getTeam());
+            
+                        }else{
+
+                            //return "Player eliminated.";
+                        }
+                    } else { // free bunker from player's team
+            
+                    
+                    }
+                }else if(hasPlayer(x, y)){ // map position with player
+                    Player winner = fight(getPlayer(x, y),p);
+                    if(winner.equals(p)){
+                   
+                    }else{
+                    //return "Player eliminated.";
+                    }
+                } else {
+                
+                }
+            } 
+        }
+
     }
+
+
+
         
 }

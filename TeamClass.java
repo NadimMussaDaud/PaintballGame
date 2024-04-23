@@ -7,11 +7,13 @@ public class TeamClass implements Team{
     private String name;
     private Array<Player> players;
     private Array<Bunker> bunkers;
+    private Bunker initialBunker;
     public TeamClass(String name, Bunker bunker){
         this.name = name;
         this.players = new ArrayClass<>();
         this.bunkers = new ArrayClass<>();
         bunkers.insertLast(bunker);
+        this.initialBunker = bunker;
     }
 
     @Override
@@ -63,6 +65,10 @@ public class TeamClass implements Team{
     @Override
     public boolean hasBunker(Bunker bunker) {
         return bunkers.searchIndexOf(bunker) != -1;
+    }
+
+    public String initialBunker(){
+        return initialBunker.getName();
     }
 
 }

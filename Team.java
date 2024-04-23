@@ -14,4 +14,5 @@ public interface Team {
     boolean hasBunkers();
     void removeBunker(Bunker b);
     boolean hasBunker(Bunker bunker);
+    String initialBunker();
 }
