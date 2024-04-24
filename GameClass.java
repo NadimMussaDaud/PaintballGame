@@ -22,6 +22,7 @@ public class GameClass implements Game{
     private Array<Bunker> bunkers;
     private Array<Team> teams;
     private Queue<String> teamTurns;
+    private boolean gameOver;
 
     public GameClass(int width, int height, int teamsNumber, int bunkersNumber){
         this.width = width;
@@ -30,6 +31,7 @@ public class GameClass implements Game{
         teams = new ArrayClass<>(teamsNumber);
         map = new BunkerClass[width+1][height+1]; //(0,0) not used
         teamTurns = new LinkedList<>();
+        gameOver = false;
     }
 
     public void addBunker(int x, int y, int treasure, String name){
@@ -466,12 +468,12 @@ public class GameClass implements Game{
     private void removeTeam(Team team) {
         teamTurns.remove(team);
         teams.removeAt(teams.searchIndexOf(team));
+
+        if(teams.size() == 1)
+            gameOver = true;
     }
     
     //Uma equipa é ativa se tiver bunkers em seu nome OU se tiver jogadores
-    private boolean won(){
-        return teams.size() == 1;
-    }
 
     @Override
     public String[][] attack() {
@@ -662,6 +664,13 @@ public class GameClass implements Game{
             } 
         }
 
+    }
+
+    @Override
+    public String getWinner() {
+        if(gameOver) {
+            return teams.get(0).getName();
+        } return null;
     }
 
 

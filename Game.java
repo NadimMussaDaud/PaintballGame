@@ -25,4 +25,5 @@ public interface Game {
     Player getPlayer(int x,int y);
     Iterator<String> move(Player p, Array<String> dir);
     String[][] attack();
+    String getWinner();
 }

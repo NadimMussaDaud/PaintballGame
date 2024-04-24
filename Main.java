@@ -39,7 +39,6 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        
         processCommands(in);
         in.close();
     }
@@ -54,49 +53,93 @@ public class Main {
     }
 
     private static void processCommand(Command command, Scanner in){
-        switch(command){
-                case GAME -> {
-                    initGame(in);
+        
+            switch(command){
+                    case GAME -> {
+                        initGame(in);
+                    }
+                    case MOVE -> {
+                        if(game != null){
+                            move(in);
+                        }
+                        else{
+                            invalidCommand();
+                            in.nextLine();
+                        }
+                    }
+                    case CREATE -> {
+                        if(game != null){
+                            create(in);
+                        }
+                        else{
+                            invalidCommand();
+                            in.nextLine();
+                        }
+                    }
+                    case ATTACK -> {
+                        if(game != null){
+                            attack();
+                            in.nextLine();
+                        }
+                        else{
+                            invalidCommand();
+                            in.nextLine();
+                        }
+                    }
+                    case STATUS -> {
+                        if(game != null){
+                            status();
+                            in.nextLine();
+                        }
+                        else{
+                            invalidCommand();
+                            in.nextLine();
+                        }
+                    }
+                    case MAP -> {
+                        if(game != null){
+                            printMap();
+                            in.nextLine();
+                        }
+                        else{
+                            invalidCommand();
+                            in.nextLine();
+                        }
+                    }
+                    case BUNKERS -> {
+                        if(game != null){
+                            bunkers();
+                            in.nextLine();
+                        }
+                        else{
+                            invalidCommand();
+                            in.nextLine();
+                        }
+                    }
+                    case PLAYERS -> {
+                        if(game != null){
+                            players();
+                            in.nextLine();
+                        }
+                        else{
+                            invalidCommand();
+                            in.nextLine();
+                        }
+                    }
+                    case HELP -> {
+                        help();
+                        in.nextLine();
+                    }
+                    case QUIT -> {
+                        exitMessage();
+                        in.nextLine();
+                    }
+                    case UNKNOWN -> {
+                        invalidCommand();
+                        in.nextLine();
+                    }
                 }
-                case MOVE -> {
-                    move(in);
-                }
-                case CREATE -> {
-                    create(in);
-                }
-                case ATTACK -> {
-                    attack();
-                    in.nextLine();
-                }
-                case STATUS -> {
-                    status();
-                    in.nextLine();
-                }
-                case MAP -> {
-                    printMap();
-                    in.nextLine();
-                }
-                case BUNKERS -> {
-                    bunkers();
-                    in.nextLine();
-                }
-                case PLAYERS -> {
-                    players();
-                    in.nextLine();
-                }
-                case HELP -> {
-                    help();
-                    in.nextLine();
-                }
-                case QUIT -> {
-                    exitMessage();
-                    in.nextLine();
-                }
-                case UNKNOWN -> {
-                    invalidCommand();
-                    in.nextLine();
-                }
-            }
+            
     }
 
     private static void attack() {
