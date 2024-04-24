@@ -32,6 +32,7 @@ public class Main {
     private static final String PLAYER_FORMAT = "%d players:\n" ;
     private static final String NO_PLAYERS = "Without players.";
     private static final String NO_BUNKERS = "Without bunkers.";
+    private static final String WINNER_MESSAGE = "Winner is %s.\n";
     private static final String RED = GameClass.RED;
     private static final String BLUE = GameClass.BLUE;
     private static final String GREEN = GameClass.GREEN;
@@ -162,6 +163,12 @@ public class Main {
             }
             System.out.println();
         }
+        
+        String winner = game.getWinner();
+        if(winner != null){
+            game = null;
+            System.out.printf(WINNER_MESSAGE,winner);
+        }
     }
 
     private static void move(Scanner in) {
@@ -211,11 +218,19 @@ public class Main {
                     }else
                          System.out.println(OCCUPIED_POSITION);
                 }else
-                     System.out.println(MOVING_OFF);}*/
+                     System.out.println(MOVING_OFF);
+            }*/
                     Iterator<String> it = game.move(p,directions);
                     while (it.hasNext()) {
                         System.out.println(it.next());
                     }
+                    String winner = game.getWinner();
+                    if(winner != null)
+                    {
+                        game = null;
+                        System.out.printf(WINNER_MESSAGE,winner);
+                    }
+                        
         }
     }
 

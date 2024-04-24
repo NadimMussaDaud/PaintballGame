@@ -338,7 +338,10 @@ public class GameClass implements Game{
         Array<String> moveResults = new ArrayClass<>();
         Iterator<String> it = directions.iterator();
 
-        while(it.hasNext()){
+        // TODO: Se houver campeão parar. Verificar na main se houve campeão. Se houver imprimir mensagens recebidas
+        // E depois imprimir Campeao.
+
+        while(it.hasNext() && !gameOver){
             int x = p.getX();
             int y = p.getY();
             String dir = it.next();
@@ -409,7 +412,7 @@ public class GameClass implements Game{
             //changeTurns();
             moveResults.insertLast(String.format("%s player in position (%d, %d)",p.getType(),p.getX(),p.getY()));
             }
-        }
+        } 
         changeTurns();
         return moveResults.iterator();
     }
