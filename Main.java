@@ -381,18 +381,20 @@ public class Main {
             String team = in.next();
             String bunker = in.nextLine().trim();
 
-
-            if(i == teams-1 && !game.canPlay()){
-                System.out.println(FATAL_ERROR);
-                game = null;
-                break;
-            }
-            
             if(ValidTeam(team, bunker)){
                 game.addTeam(team, bunker);
             }else
                 System.out.println(INVALID_TEAM);
         }
+        if(i == teams-1 && !game.canPlay()){
+                System.out.println(FATAL_ERROR);
+                game = null;
+                break;
+        }
+            
+
+
+        
         /*
         if(!game.canPlay()){
             game = null;
