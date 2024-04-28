@@ -1,0 +1,56 @@
+create
+players
+bunkers
+xx
+map
+status
+game 15 20 3 4
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Winterfell
+NightWatch Castle Black
+bunkers
+create soldado Casterly Rock
+status
+create red Castle Black
+map
+create red Castle Black
+help
+create red Casterly Rock
+map
+players
+create blue Winterfell
+players
+map
+create green Castle Black
+bunkers
+players
+map
+create green Casterly Rock
+status
+xx
+players
+create blue Winterfell
+help
+create red Castle Black
+status
+create red Casterly Jazz
+game 20 20 3 5
+10 15 4 Winterfell
+12 20 -1 Castle Black
+1 3 10 Casterly Rock
+7 -2 8 Highgarden
+15 16 2 Winterfell
+Lannister Highgarden
+Stark Winterfell
+NightWatch Castle Black
+create red Stark
+bunkers
+players
+map
+status
+help
+quit

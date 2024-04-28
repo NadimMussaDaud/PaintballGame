@@ -1,0 +1,301 @@
+> 4 bunkers:
+2 teams:
+Red> green player created in Castle One
+Blue> red player created in Castle Two
+Red> green player in position (4, 4)
+Blue> red player in position (5, 4)
+red player in position (6, 4)
+red player in position (5, 4)
+Red> Won the fight.
+green player in position (5, 4)
+Blue> blue player created in Castle Two
+Red> red player created in Castle One
+Blue> Won the fight.
+blue player in position (5, 4)
+Red> 1 players:
+red player in position (3, 4)
+Red> red player in position (3, 5)
+red player in position (4, 5)
+Bunker seized.
+red player in position (5, 5)
+Blue> Player eliminated.
+Winner is Red.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 4 bunkers:
+2 teams:
+Red> green player created in Castle One
+Blue> red player created in Castle Two
+Red> green player in position (4, 4)
+Blue> red player in position (5, 4)
+red player in position (6, 4)
+red player in position (5, 4)
+Red> Won the fight.
+green player in position (5, 4)
+Blue> blue player created in Castle Two
+Red> red player created in Castle One
+Blue> Won the fight.
+blue player in position (5, 4)
+Red> 1 players:
+red player in position (3, 4)
+Red> red player in position (3, 5)
+red player in position (4, 5)
+Bunker seized.
+red player in position (5, 5)
+Blue> blue player in position (5, 3)
+Red> green player created in Castle One
+Blue> blue player in position (5, 2)
+Red> Bunker not free.
+Blue> Bunker seized.
+blue player in position (5, 1)
+Red> 2 players:
+red player in position (5, 5)
+green player in position (3, 4)
+Red> red player in position (5, 4)
+red player in position (5, 3)
+red player in position (5, 2)
+Blue> Player eliminated.
+Red> Bunker seized.
+red player in position (5, 1)
+red player in position (6, 1)
+red player in position (7, 1)
+Winner is Red.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 3 bunkers:
+2 teams:
+TeamBlack> 10 10
+3 bunkers:
+Castle Black (TeamBlack)
+Castle Red (TeamRed)
+Castle My (without owner)
+2 teams:
+TeamBlack; TeamRed
+TeamBlack> red player created in Castle Black
+TeamRed> red player created in Castle Red
+TeamBlack> red player in position (3, 3)
+red player in position (4, 3)
+red player in position (5, 3)
+TeamRed> 1 bunkers:
+Castle Red with 14 coins in position (6, 5)
+TeamRed> red player in position (6, 4)
+red player in position (7, 4)
+red player in position (7, 3)
+TeamBlack> 1 players:
+red player in position (5, 3)
+TeamBlack> green player created in Castle Black
+TeamRed> 1 players:
+red player in position (7, 3)
+TeamRed> red player in position (6, 3)
+Won the fight.
+red player in position (5, 3)
+red player in position (4, 3)
+TeamBlack> green player in position (4, 2)
+TeamRed> red player in position (3, 3)
+Bunker seized.
+red player in position (3, 2)
+red player in position (3, 1)
+TeamBlack> Without bunkers.
+TeamBlack> 1 players:
+green player in position (4, 2)
+TeamBlack> green player in position (5, 2)
+TeamRed> 2 bunkers:
+Castle Red with 20 coins in position (6, 5)
+Castle Black with 13 coins in position (3, 2)
+TeamRed> 1 players:
+red player in position (3, 1)
+TeamRed> blue player created in Castle Black
+TeamBlack> 1 players:
+green player in position (5, 2)
+TeamBlack> Bunker seized.
+green player in position (6, 2)
+TeamRed> 2 players:
+red player in position (3, 1)
+blue player in position (3, 2)
+TeamRed> red player in position (4, 1)
+red player in position (5, 1)
+red player in position (6, 1)
+TeamBlack> 1 players:
+green player in position (6, 2)
+TeamBlack> Won the fight.
+green player in position (6, 1)
+TeamRed> 1 players:
+blue player in position (3, 2)
+TeamRed> 2 bunkers:
+Castle Red with 24 coins in position (6, 5)
+Castle Black with 15 coins in position (3, 2)
+TeamRed> blue player in position (3, 1)
+TeamBlack> green player in position (7, 1)
+TeamRed> blue player in position (4, 1)
+TeamBlack> green player in position (6, 1)
+TeamRed> blue player in position (5, 1)
+TeamBlack> Player eliminated.
+TeamRed> 1 players:
+blue player in position (5, 1)
+TeamRed> blue player in position (4, 1)
+TeamBlack> Non-existent player type.
+TeamRed> blue player in position (4, 2)
+TeamBlack> blue player created in Castle My
+TeamRed> blue player in position (3, 2)
+TeamBlack> blue player in position (6, 1)
+TeamRed> red player created in Castle Red
+TeamBlack> blue player in position (6, 2)
+TeamRed> blue player in position (3, 3)
+TeamBlack> blue player in position (6, 3)
+TeamRed> 10 10
+3 bunkers:
+Castle Black (TeamRed)
+Castle Red (TeamRed)
+Castle My (TeamBlack)
+2 teams:
+TeamBlack; TeamRed
+TeamRed> red player created in Castle Black
+TeamBlack> blue player in position (6, 4)
+TeamRed> Won the fight.
+red player in position (6, 4)
+red player in position (6, 3)
+Bunker seized.
+red player in position (6, 2)
+Winner is TeamRed.
+> 3 bunkers:
+2 teams:
+TeamBlack> 10 10
+3 bunkers:
+Castle Black (TeamBlack)
+Castle Red (TeamRed)
+Castle My (without owner)
+2 teams:
+TeamBlack; TeamRed
+TeamBlack> red player created in Castle Black
+TeamRed> red player created in Castle Red
+TeamBlack> red player in position (3, 3)
+red player in position (4, 3)
+red player in position (5, 3)
+TeamRed> 1 bunkers:
+Castle Red with 14 coins in position (6, 5)
+TeamRed> red player in position (6, 4)
+red player in position (7, 4)
+red player in position (7, 3)
+TeamBlack> 1 players:
+red player in position (5, 3)
+TeamBlack> green player created in Castle Black
+TeamRed> 1 players:
+red player in position (7, 3)
+TeamRed> red player in position (6, 3)
+Won the fight.
+red player in position (5, 3)
+red player in position (4, 3)
+TeamBlack> green player in position (4, 2)
+TeamRed> red player in position (3, 3)
+Bunker seized.
+red player in position (3, 2)
+red player in position (3, 1)
+TeamBlack> Without bunkers.
+TeamBlack> 1 players:
+green player in position (4, 2)
+TeamBlack> green player in position (5, 2)
+TeamRed> 2 bunkers:
+Castle Red with 20 coins in position (6, 5)
+Castle Black with 13 coins in position (3, 2)
+TeamRed> 1 players:
+red player in position (3, 1)
+TeamRed> blue player created in Castle Black
+TeamBlack> 1 players:
+green player in position (5, 2)
+TeamBlack> Bunker seized.
+green player in position (6, 2)
+TeamRed> 2 players:
+red player in position (3, 1)
+blue player in position (3, 2)
+TeamRed> red player in position (4, 1)
+red player in position (5, 1)
+red player in position (6, 1)
+TeamBlack> 1 players:
+green player in position (6, 2)
+TeamBlack> Won the fight.
+green player in position (6, 1)
+TeamRed> 1 players:
+blue player in position (3, 2)
+TeamRed> 2 bunkers:
+Castle Red with 24 coins in position (6, 5)
+Castle Black with 15 coins in position (3, 2)
+TeamRed> blue player in position (3, 1)
+TeamBlack> green player in position (7, 1)
+TeamRed> blue player in position (4, 1)
+TeamBlack> green player in position (6, 1)
+TeamRed> blue player in position (5, 1)
+TeamBlack> Player eliminated.
+TeamRed> 1 players:
+blue player in position (5, 1)
+TeamRed> blue player in position (4, 1)
+TeamBlack> Non-existent player type.
+TeamRed> blue player in position (4, 2)
+TeamBlack> blue player created in Castle My
+TeamRed> blue player in position (3, 2)
+TeamBlack> blue player in position (6, 1)
+TeamRed> red player created in Castle Red
+TeamBlack> blue player in position (6, 2)
+TeamRed> blue player in position (3, 3)
+TeamBlack> 1 players:
+blue player in position (6, 2)
+TeamBlack> blue player in position (5, 2)
+TeamRed> No player in that position.
+TeamBlack> blue player in position (5, 3)
+TeamRed> blue player in position (4, 3)
+TeamBlack> 1 players:
+blue player in position (5, 3)
+TeamBlack> Non-existent bunker.
+TeamRed> 2 players:
+blue player in position (4, 3)
+red player in position (6, 5)
+TeamRed> Won the fight.
+blue player in position (5, 3)
+TeamBlack> Without players.
+TeamBlack> 1 bunkers:
+Castle My with 39 coins in position (6, 2)
+TeamBlack> blue player created in Castle My
+TeamRed> 2 players:
+blue player in position (5, 3)
+red player in position (6, 5)
+TeamRed> red player in position (6, 4)
+red player in position (6, 3)
+Won the fight and bunker seized.
+red player in position (6, 2)
+Winner is TeamRed.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 2 bunkers:
+2 teams:
+first> red player created in Castle One
+second> blue player created in Castle Two
+first> Non-existent player type.
+second> blue player in position (2, 5)
+first> red player in position (2, 4)
+red player in position (1, 4)
+Bunker seized.
+red player in position (1, 5)
+second> Player eliminated.
+Winner is first.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 3 bunkers:
+2 teams:
+first> red player created in Castle One
+second> blue player created in Castle Two
+first> Non-existent player type.
+second> Bunker seized.
+blue player in position (2, 5)
+first> red player in position (2, 4)
+red player in position (1, 4)
+Bunker seized.
+red player in position (1, 5)
+second> Player eliminated.
+first> Bunker seized.
+red player in position (2, 5)
+Winner is first.
+> Invalid command.
+> Bye.

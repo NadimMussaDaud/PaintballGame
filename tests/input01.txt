@@ -1,0 +1,147 @@
+help
+game 20 20 3 4
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Winterfell
+NightWatch Castle Black
+help
+game 22 20 3 6
+10 -15 4 Winterfell
+23 20 1 Castle Black
+1 3 0 Casterly Rock
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Dread Fort
+NightWatch Castle Black
+help
+game 20 20 3 5
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+7 -2 8 Highgarden
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Winterfell
+NightWatch Castle Black
+help
+game 20 20 3 6
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+7 2 8 Highgarden
+15 16 2 Dread Fort
+1 1 1 Castle Black
+Lannister Casterly Rock
+Stark Winterfell
+NightWatch Castle Black
+help
+game 20 20 3 5
+10 15 4 Winterfell
+12 20 1 Castle Black
+10 15 8 Highgarden
+1 3 10 Casterly Rock
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Winterfell
+NightWatch Castle Black
+game 20 20 3 4
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+15 16 2 Dread Fort
+NightWatch Castle Black
+Lannister Casterly Rock
+Stark Castle Black
+help
+game 15 20 3 4
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+15 16 2 Dread Fort
+Stark Winterfell
+Lannister Casterly Rock
+Stark Castle Black
+help
+game 20 20 4 5
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+7 2 8 Highgarden
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Castle nok
+NightWatch Castle Black
+Stark Dread Fort
+help
+game 22 20 3 3
+10 -15 4 Winterfell
+23 20 1 Castle Black
+1 3 0 Casterly Rock
+Lannister Casterly Rock
+Stark Dread Fort
+NightWatch Castle Black
+help
+game 20 20 3 5
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+7 -2 8 Highgarden
+15 16 2 Dread Fort
+Lannister Highgarden
+Stark Winterfell
+NightWatch Winterfell
+help
+game 20 20 2 6
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+7 2 8 Highgarden
+15 16 2 Dread Fort
+1 1 1 Castle Black
+Stark Winterfell
+NightWatch Castle nok
+game 20 20 3 5
+10 15 4 Winterfell
+12 20 1 Castle Black
+10 15 8 Highgarden
+1 3 10 Winterfell
+15 16 2 Highgarden
+Lannister Casterly Rock
+Stark Winterfell
+NightWatch Castle nok
+help
+game 20 20 3 4
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 -10 Casterly Rock
+15 16 2 Dread Fort
+NightWatch Castle Black
+Lannister Casterly Rock
+Stark Castle White
+help
+game 15 20 3 4
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Jazz
+15 16 2 Dread Fort
+Stark Winterfell
+Lannister Casterly Rock
+Stark Castle Black
+help
+game 20 20 4 5
+10 15 4 Winterfell
+12 201 1 Castle Black
+1 3 10 Casterly Rock
+7 2 8 Highgarden
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Castle nok
+NightWatch Castle Black
+Stark White Fort
+help
+quit

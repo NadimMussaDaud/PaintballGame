@@ -1,0 +1,162 @@
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 4 bunkers:
+3 teams:
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> 6 bunkers:
+Bunker not created.
+Bunker not created.
+Bunker not created.
+3 teams:
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> 5 bunkers:
+Bunker not created.
+3 teams:
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> 6 bunkers:
+Bunker not created.
+3 teams:
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> 5 bunkers:
+Bunker not created.
+3 teams:
+Lannister> 4 bunkers:
+3 teams:
+Team not created.
+NightWatch> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+NightWatch> 4 bunkers:
+3 teams:
+Team not created.
+Stark> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Stark> 5 bunkers:
+4 teams:
+Team not created.
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> 3 bunkers:
+Bunker not created.
+Bunker not created.
+Bunker not created.
+3 teams:
+Team not created.
+Team not created.
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 5 bunkers:
+Bunker not created.
+3 teams:
+Team not created.
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 6 bunkers:
+Bunker not created.
+2 teams:
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> 5 bunkers:
+Bunker not created.
+Bunker not created.
+3 teams:
+Team not created.
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 4 bunkers:
+Bunker not created.
+3 teams:
+Team not created.
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 4 bunkers:
+3 teams:
+Team not created.
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 5 bunkers:
+Bunker not created.
+4 teams:
+Team not created.
+Team not created.
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> Bye.

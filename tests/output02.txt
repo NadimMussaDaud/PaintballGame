@@ -1,0 +1,135 @@
+> Invalid command.
+> 5 bunkers:
+Bunker not created.
+3 teams:
+Team not created.
+Lannister> 23 20
+4 bunkers:
+Winterfell (Stark)
+Casterly Rock (Lannister)
+Highgarden (without owner)
+Dread Fort (without owner)
+2 teams:
+Lannister; Stark
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> 4 bunkers:
+3 teams:
+Lannister> 20 20
+4 bunkers:
+Winterfell (Stark)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Dread Fort (without owner)
+3 teams:
+Lannister; Stark; NightWatch
+Lannister> 6 bunkers:
+Bunker not created.
+Bunker not created.
+Bunker not created.
+3 teams:
+Lannister> 22 20
+3 bunkers:
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Dread Fort (Stark)
+3 teams:
+Lannister; Stark; NightWatch
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> 5 bunkers:
+Bunker not created.
+3 teams:
+Lannister> 20 20
+4 bunkers:
+Winterfell (Stark)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Dread Fort (without owner)
+3 teams:
+Lannister; Stark; NightWatch
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> 6 bunkers:
+Bunker not created.
+3 teams:
+Lannister> 20 20
+5 bunkers:
+Winterfell (Stark)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Highgarden (without owner)
+Dread Fort (without owner)
+3 teams:
+Lannister; Stark; NightWatch
+Lannister> 20 20
+5 bunkers:
+Winterfell (Stark)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Highgarden (without owner)
+Dread Fort (without owner)
+3 teams:
+Lannister; Stark; NightWatch
+Lannister> 5 bunkers:
+Bunker not created.
+3 teams:
+Lannister> 4 bunkers:
+3 teams:
+Team not created.
+NightWatch> 20 20
+4 bunkers:
+Winterfell (without owner)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Dread Fort (without owner)
+2 teams:
+NightWatch; Lannister
+NightWatch> 4 bunkers:
+3 teams:
+Team not created.
+Stark> 15 20
+4 bunkers:
+Winterfell (Stark)
+Castle Black (without owner)
+Casterly Rock (Lannister)
+Dread Fort (without owner)
+2 teams:
+Stark; Lannister
+Stark> 5 bunkers:
+4 teams:
+Team not created.
+Lannister> 20 20
+5 bunkers:
+Winterfell (without owner)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Highgarden (without owner)
+Dread Fort (Stark)
+3 teams:
+Lannister; NightWatch; Stark
+Lannister> Bye.

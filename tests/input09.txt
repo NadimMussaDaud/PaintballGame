@@ -1,0 +1,121 @@
+game 30 45 4 8
+15 20 5 Castle One
+17 22 10 Castle Two
+19 24 10 Castle Three
+21 26 10 Castle Four
+15 21 10 Castle Five
+15 25 10 Castle Six
+19 25 10 Castle Seven
+1 1 20 Castle Big
+TeamRed Castle Two
+TeamGreen Castle Four
+TeamBlue Castle Six
+TeamWhite Castle One
+status
+bunkers
+players
+create red Castle Two
+bunkers
+create green Castle Four
+bunkers
+create blue Castle Six
+bunkers
+create green Castle One
+players
+move 17 22 south south south
+players
+move 21 26 north
+players
+move 15 25 west
+players
+move 15 20 south
+players
+bunkers
+create red Castle Two
+players
+bunkers
+create green Castle Four
+bunkers
+players
+create blue Castle Six
+bunkers
+status
+players
+create red Castle One
+bunkers
+players
+status
+players
+move 17 22 north north north
+players
+bunkers
+status
+players
+move 21 25 north
+players
+move 14 25 south
+players
+bunkers
+move 15 21 east
+players
+bunkers
+status
+move 17 25 east east north
+bunkers
+status
+players
+move 21 24 east
+players
+move 15 25 west
+players
+move 15 20 west west west
+bunkers
+move 17 19 north north north
+players
+bunkers
+move 21 26 east
+players
+bunkers
+move 14 25 east
+bunkers
+players
+move 12 20 north north north
+players
+bunkers
+create green Castle Seven
+bunkers
+players
+create red Castle Four
+players
+move 15 25 west west north
+players
+move 12 17 west west west
+players
+bunkers
+move 19 24 north west west
+players
+bunkers
+create blue Castle Four
+players
+bunkers
+move 15 25 west
+players
+move 9 17 north north north
+status
+players
+bunkers
+move 19 25 north
+players
+bunkers
+move 21 26 south south south
+players
+bunkers
+move 14 25 south
+create red Castle One
+move 17 16 north north north
+move 22 24 south
+move 14 25 west
+players
+move 9 14 west west west
+status
+quit

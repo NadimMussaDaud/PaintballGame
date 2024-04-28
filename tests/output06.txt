@@ -1,0 +1,178 @@
+> Invalid command.
+> Invalid command.
+> Invalid command.
+> Invalid command.
+> Invalid command.
+> Invalid command.
+> 4 bunkers:
+3 teams:
+Lannister> 1 bunkers:
+Casterly Rock with 10 coins in position (1, 3)
+Lannister> Non-existent player type.
+Stark> 15 20
+4 bunkers:
+Winterfell (Stark)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Dread Fort (without owner)
+3 teams:
+Lannister; Stark; NightWatch
+Stark> Bunker illegally invaded.
+NightWatch> 15 20
+**1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+1 . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . .
+3 . . . . . . . . . . . . . . .
+4 . . . . . . . . . . . . . . .
+5 . . . . . . . . . . . . . . .
+6 . . . . . . . . . . . . . . .
+7 . . . . . . . . . . . . . . .
+8 . . . . . . . . . . . . . . .
+9 . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . .
+14 . . . . . . . . . . . . . . .
+15 . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . .
+17 . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . .
+19 . . . . . . . . . . . . . . .
+20 . . . . . . . . . . . B . . .
+NightWatch> Insufficient coins for recruitment.
+Lannister> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Lannister> red player created in Casterly Rock
+Stark> 15 20
+**1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+1 . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . .
+3 . . . . . . . . . . . . . . .
+4 . . . . . . . . . . . . . . .
+5 . . . . . . . . . . . . . . .
+6 . . . . . . . . . . . . . . .
+7 . . . . . . . . . . . . . . .
+8 . . . . . . . . . . . . . . .
+9 . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . .
+14 . . . . . . . . . . . . . . .
+15 . . . . . . . . . B . . . . .
+16 . . . . . . . . . . . . . . .
+17 . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . .
+19 . . . . . . . . . . . . . . .
+20 . . . . . . . . . . . . . . .
+Stark> Without players.
+Stark> blue player created in Winterfell
+NightWatch> Without players.
+NightWatch> 15 20
+**1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+1 . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . .
+3 . . . . . . . . . . . . . . .
+4 . . . . . . . . . . . . . . .
+5 . . . . . . . . . . . . . . .
+6 . . . . . . . . . . . . . . .
+7 . . . . . . . . . . . . . . .
+8 . . . . . . . . . . . . . . .
+9 . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . .
+14 . . . . . . . . . . . . . . .
+15 . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . .
+17 . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . .
+19 . . . . . . . . . . . . . . .
+20 . . . . . . . . . . . B . . .
+NightWatch> green player created in Castle Black
+Lannister> 1 bunkers:
+Casterly Rock with 12 coins in position (1, 3)
+Lannister> 1 players:
+red player in position (1, 3)
+Lannister> 15 20
+**1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+1 . . . . . . . . . . . . . . .
+2 . . . . . . . . . . . . . . .
+3 O . . . . . . . . . . . . . .
+4 . . . . . . . . . . . . . . .
+5 . . . . . . . . . . . . . . .
+6 . . . . . . . . . . . . . . .
+7 . . . . . . . . . . . . . . .
+8 . . . . . . . . . . . . . . .
+9 . . . . . . . . . . . . . . .
+10 . . . . . . . . . . . . . . .
+11 . . . . . . . . . . . . . . .
+12 . . . . . . . . . . . . . . .
+13 . . . . . . . . . . . . . . .
+14 . . . . . . . . . . . . . . .
+15 . . . . . . . . . . . . . . .
+16 . . . . . . . . . . . . . . .
+17 . . . . . . . . . . . . . . .
+18 . . . . . . . . . . . . . . .
+19 . . . . . . . . . . . . . . .
+20 . . . . . . . . . . . . . . .
+Lannister> Bunker not free.
+Stark> 15 20
+4 bunkers:
+Winterfell (Stark)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Dread Fort (without owner)
+3 teams:
+Lannister; Stark; NightWatch
+Stark> Invalid command.
+Stark> 1 players:
+blue player in position (10, 15)
+Stark> Bunker not free.
+NightWatch> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+NightWatch> Bunker not free.
+Lannister> 15 20
+4 bunkers:
+Winterfell (Stark)
+Castle Black (NightWatch)
+Casterly Rock (Lannister)
+Dread Fort (without owner)
+3 teams:
+Lannister; Stark; NightWatch
+Lannister> Non-existent bunker.
+Stark> 5 bunkers:
+Bunker not created.
+Bunker not created.
+Bunker not created.
+3 teams:
+Team not created.
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> Invalid command.
+> Invalid command.
+> Invalid command.
+> Invalid command.
+> Invalid command.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> Bye.

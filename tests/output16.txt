@@ -1,0 +1,154 @@
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 5 bunkers:
+Bunker not created.
+Bunker not created.
+Bunker not created.
+3 teams:
+Team not created.
+Team not created.
+FATAL ERROR: Insufficient number of teams.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 3 bunkers:
+2 teams:
+TeamBlack> 10 11
+3 bunkers:
+Castle Black (TeamBlack)
+Castle Red (TeamRed)
+Castle My (without owner)
+2 teams:
+TeamBlack; TeamRed
+TeamBlack> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+TeamBlack> red player created in Castle Black
+TeamRed> red player created in Castle Red
+TeamBlack> red player in position (3, 3)
+red player in position (4, 3)
+red player in position (5, 3)
+TeamRed> 1 bunkers:
+Castle Red with 14 coins in position (6, 5)
+TeamRed> red player in position (6, 4)
+red player in position (7, 4)
+red player in position (7, 3)
+TeamBlack> 1 players:
+red player in position (5, 3)
+TeamBlack> green player created in Castle Black
+TeamRed> 1 players:
+red player in position (7, 3)
+TeamRed> red player in position (6, 3)
+Won the fight.
+red player in position (5, 3)
+red player in position (4, 3)
+TeamBlack> green player in position (4, 2)
+TeamRed> red player in position (3, 3)
+Bunker seized.
+red player in position (3, 2)
+red player in position (3, 1)
+TeamBlack> Without bunkers.
+TeamBlack> 1 players:
+green player in position (4, 2)
+TeamBlack> green player in position (5, 2)
+TeamRed> 2 bunkers:
+Castle Red with 20 coins in position (6, 5)
+Castle Black with 13 coins in position (3, 2)
+TeamRed> 1 players:
+red player in position (3, 1)
+TeamRed> blue player created in Castle Black
+TeamBlack> 1 players:
+green player in position (5, 2)
+TeamBlack> Bunker seized.
+green player in position (6, 2)
+TeamRed> 2 players:
+red player in position (3, 1)
+blue player in position (3, 2)
+TeamRed> red player in position (4, 1)
+red player in position (5, 1)
+red player in position (6, 1)
+TeamBlack> 1 players:
+green player in position (6, 2)
+TeamBlack> Won the fight.
+green player in position (6, 1)
+TeamRed> 1 players:
+blue player in position (3, 2)
+TeamRed> 2 bunkers:
+Castle Red with 24 coins in position (6, 5)
+Castle Black with 15 coins in position (3, 2)
+TeamRed> blue player in position (3, 1)
+TeamBlack> 1 players:
+green player in position (6, 1)
+TeamBlack> green player in position (7, 1)
+TeamRed> blue player in position (4, 1)
+TeamBlack> green player in position (6, 1)
+TeamRed> blue player in position (5, 1)
+TeamBlack> Player eliminated.
+TeamRed> 1 players:
+blue player in position (5, 1)
+TeamRed> 2 bunkers:
+Castle Red with 30 coins in position (6, 5)
+Castle Black with 21 coins in position (3, 2)
+TeamRed> blue player in position (4, 1)
+TeamBlack> Without players.
+TeamBlack> 1 bunkers:
+Castle My with 27 coins in position (6, 2)
+TeamBlack> Non-existent player type.
+TeamRed> 1 players:
+blue player in position (4, 1)
+TeamRed> blue player in position (4, 2)
+TeamBlack> blue player created in Castle My
+TeamRed> blue player in position (3, 2)
+TeamBlack> 1 bunkers:
+Castle My with 29 coins in position (6, 2)
+TeamBlack> 1 players:
+blue player in position (6, 2)
+TeamBlack> blue player in position (6, 1)
+TeamRed> 1 players:
+blue player in position (3, 2)
+TeamRed> 2 bunkers:
+Castle Red with 36 coins in position (6, 5)
+Castle Black with 27 coins in position (3, 2)
+TeamRed> red player created in Castle Red
+TeamBlack> 1 players:
+blue player in position (6, 1)
+TeamBlack> blue player in position (6, 2)
+TeamRed> 2 players:
+blue player in position (3, 2)
+red player in position (6, 5)
+TeamRed> 10 11
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . . . . . . .
+2 . . O . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . O . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+11 . . . . . . . . . .
+TeamRed> 10 11
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . . . . . . .
+2 . . O . . B . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . O . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+11 . . . . . . . . . .
+Winner is TeamRed.
+> Bye.

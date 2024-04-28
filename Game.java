@@ -26,4 +26,5 @@ public interface Game {
     Iterator<String> move(Player p, Array<String> dir);
     String[][] attack();
     String getWinner();
+    boolean bunkerWithTeam(String bunker);
 }

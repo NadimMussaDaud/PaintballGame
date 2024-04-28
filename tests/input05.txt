@@ -1,0 +1,20 @@
+create
+game 15 20 3 4
+10 15 4 Winterfell
+12 20 1 Castle Black
+1 3 10 Casterly Rock
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Winterfell
+NightWatch Castle Black
+create player Casterly Rock
+create red Castle Black
+create red Castle Black
+create red Casterly Rock
+create blue Winterfell
+create green Castle Black
+create green Casterly Rock
+create blue Winterfell
+create red Castle Black
+create red Casterly Jazz
+quit

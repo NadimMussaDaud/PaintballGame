@@ -1,0 +1,13 @@
+(** 
+[tiles n] receives the number of spaces to be covered and returns the number of ways to fill it. According to the given specifications
+[first_red n blocksize] receives [n] number of tiles to cover and [blockSize] size of block, then gives the number of ways to fill the space using Red Tiles
+**)
+let rec tiles n =
+  match n with
+  | 0 | 1 | 2 -> 1
+  | _ -> tiles (n - 1) + first_red n 3
+
+and first_red n blockSize =
+  if n <= blockSize then 1
+  else
+    first_red n (blockSize + 1) + tiles (n - blockSize - 1)

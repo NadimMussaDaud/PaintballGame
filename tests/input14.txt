@@ -1,0 +1,130 @@
+game 10 10 3 5
+8 6 10 Castle One
+4 6 10 Castle Two
+10 6 10 Castle Three
+10 9 10 Castle Four
+4 6 10 Castle Five
+first Castle One
+second Castle Two
+third Castle Three
+create blue Castle One
+create blue Castle Two
+create blue Castle Three
+attack
+game 10 10 3 5
+8 6 10 Castle One
+4 6 10 Castle Two
+10 6 10 Castle Three
+10 9 10 Castle Four
+4 6 10 Castle Five
+first Castle One
+second Castle Two
+third Castle Three
+create blue Castle One
+create blue Castle Two
+create green Castle Three
+attack
+game 10 10 3 5
+8 6 10 Castle One
+4 6 10 Castle Two
+10 6 10 Castle Three
+10 9 10 Castle Four
+4 6 10 Castle Five
+first Castle One
+second Castle Two
+third Castle Three
+create blue Castle One
+create blue Castle Two
+create red Castle Three
+attack
+players
+move 4 6 south
+players
+move 10 6 north south north
+attack
+move 4 7 north
+move 10 5 north south south
+create green Castle One
+attack
+bunkers
+players
+status
+game 10 10 3 5
+8 6 10 Castle One
+4 6 10 Castle Two
+10 6 10 Castle Three
+10 9 10 Castle Four
+4 6 10 Castle Five
+first Castle One
+second Castle Two
+third Castle Three
+create blue Castle One
+create red Castle Two
+create blue Castle Three
+attack
+move 4 6 south north east
+move 8 6 east
+status
+game 10 10 3 5
+1 6 10 Castle One
+4 6 10 Castle Two
+10 6 10 Castle Three
+10 9 10 Castle Four
+4 6 10 Castle Five
+first Castle One
+second Castle Two
+third Castle Three
+create blue Castle One
+create blue Castle Two
+create blue Castle Three
+attack
+game 10 10 3 5
+10 6 10 Castle One
+4 6 10 Castle Two
+1 6 10 Castle Three
+10 9 10 Castle Four
+4 6 10 Castle Five
+first Castle One
+second Castle Two
+third Castle Three
+create blue Castle One
+create blue Castle Two
+create blue Castle Three
+attack
+game 10 10 3 5
+10 6 10 Castle One
+4 6 10 Castle Two
+1 6 10 Castle Three
+10 9 10 Castle Four
+4 6 10 Castle Five
+first Castle One
+second Castle Two
+third Castle Three
+create blue Castle One
+create blue Castle Two
+create blue Castle Three
+move 10 6 west
+move 4 6 north
+move 1 6 east
+create blue Castle One
+create blue Castle Two
+create blue Castle Three
+move 10 6 north
+map
+attack
+status
+game 10 10 2 5
+6 1 10 bunker One
+6 2 10 bunker Two
+1 1 10 bunker alone
+10 6 10 Castle One
+4 6 10 Castle Two
+first bunker One
+second bunker Two
+create blue bunker One
+create red bunker Two
+move 6 1 west
+move 6 2 north north north
+attack
+status
+quit

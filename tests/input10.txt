@@ -1,0 +1,273 @@
+game 15 20 4 8
+15 20 4 Castle One
+10 18 6 Castle Two
+5 18 6 Castle Three
+10 18 1 Castle Four
+1 20 4 Castle Five
+1 5 10 Castle Six
+14 5 3 Castle Four
+7 5 10 Castle Seven
+TeamRed Castle Two
+teamBlue Castle Five
+TeamWhite Castle Four
+TeamBlack Castle Six
+status
+create red Castle Two
+create red Castle Five
+create red Castle Four
+create red Castle Six
+move 10 18 south south west
+move 1 20 east east east
+move 14 5 north west west
+move 1 5 east east east
+move 9 20 west west west
+move 4 20 east east north
+create green Castle Four
+create green Castle Six
+bunkers
+players
+create green Castle Two
+move 6 19 east east east
+players
+move 14 5 north
+players
+move 4 5 north east east
+players
+move 10 18 south
+players
+create blue Castle Five
+players
+move 14 4 west
+players
+move 6 4 east east east
+players
+move 10 19 west
+players
+move 1 20 east
+players
+move 13 4 south
+players
+move 9 4 east east east
+players
+bunkers
+create blue Castle Two
+players
+move 2 20 north
+players
+move 13 5 north
+players
+move 1 5 south
+players
+move 9 19 west
+players
+move 2 19 east
+players
+move 13 4 west
+players
+move 1 6 east
+players
+move 8 19 west
+players
+move 3 19 east
+players
+move 12 4 west
+players
+bunkers
+create red Castle Six
+status
+players
+move 7 19 north
+players
+move 4 19 north
+players
+create red Castle Four
+players
+move 1 5 north north north
+players
+status
+move 6 20 west west west
+players
+move 4 18 west
+players
+create blue Castle Four
+players
+move 1 2 east east east
+players
+move 6 18 north
+players
+move 3 18 north
+players
+status
+move 11 4 south
+players
+create blue Castle Six
+players
+status
+move 7 18 south
+players
+move 3 17 south
+players
+move 11 5 west
+players
+move 4 2 south south south
+players
+move 6 17 south
+players
+bunkers
+create blue Castle Five
+players
+move 14 5 west west west
+players
+move 4 5 east west east
+status
+players
+move 6 18 west
+status
+players
+move 3 18 east
+players
+move 10 5 west
+players
+move 2 6 south
+players
+move 10 18 south
+players
+move 4 18 east
+status
+players
+move 9 5 west
+players
+move 2 7 south
+players
+move 10 19 north
+move 1 20 north
+players
+move 8 5 west
+status
+players
+move 1 5 east
+players
+move 10 18 east
+players
+move 1 19 south
+players
+move 11 5 north west west
+players
+create red Castle Six
+players
+status
+players
+move 11 18 south
+players
+move 5 18 west
+players
+move 9 4 north north north
+players
+move 2 8 south
+create green Castle Two
+move 4 18 south
+move 7 5 west
+move 1 5 east east east
+move 7 19 north
+move 4 19 north
+move 6 5 west
+move 2 5 east
+move 7 18 west
+move 4 18 east
+move 5 5 west
+move 3 5 east
+move 10 18 south
+move 5 18 east
+players
+game 10 10 2 4
+3 4 5 Castle One
+5 5 5 Castle Two
+2 1 1 Castle Three
+5 1 1 Castle Four
+Red Castle One
+Blue Castle Two
+create green Castle One
+create red Castle Two
+move 3 4 east
+move 5 5 north east west
+players
+move 4 4 east
+players
+bunkers
+create blue Castle Two
+players
+create red Castle One
+move 5 5 north
+players
+move 3 4 south east west
+players
+bunkers
+status
+move 5 4 east
+players
+move 5 5 east east east
+move 6 4 north
+game 10 10 3 5
+1 2 10 Castle1
+3 2 10 Castle2
+5 2 10 Castle3
+3 4 10 Castle4
+5 4 10 Castle5
+blue Castle2
+red Castle3
+black Castle1
+create blue Castle2
+create red Castle3
+create green Castle1
+players
+move 3 2 west
+players
+move 5 2 south south south
+players
+create green Castle1
+players
+move 2 2 west
+status
+create blue Castle3
+status
+players
+game 10 10 3 3
+1 2 10 c1
+3 2 10 c2
+5 2 10 c3
+reino1 c1
+reino2 c2
+reino3 c3
+create blue c1
+create blue c2
+create red c3
+move 1 2 east
+move 3 2 west
+move 5 2 west west west
+status
+players
+bunkers
+create blue c1
+players
+status
+game 10 10 3 5
+1 2 10 Castle1
+3 2 10 Castle2
+5 2 10 Castle3
+3 4 10 Castle4
+5 4 10 Castle5
+blue Castle2
+red Castle3
+black Castle1
+status
+create blue Castle2
+create red Castle3
+create green Castle1
+move 3 2 east
+move 5 2 west west west
+status
+move 1 2 south
+players
+bunkers
+create blue Castle2
+quit

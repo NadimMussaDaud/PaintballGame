@@ -1,0 +1,14 @@
+> Invalid command.
+> 4 bunkers:
+3 teams:
+Lannister> Non-existent player type.
+Stark> Bunker illegally invaded.
+NightWatch> Insufficient coins for recruitment.
+Lannister> red player created in Casterly Rock
+Stark> blue player created in Winterfell
+NightWatch> green player created in Castle Black
+Lannister> Bunker not free.
+Stark> Bunker not free.
+NightWatch> Bunker not free.
+Lannister> Non-existent bunker.
+Stark> Bye.

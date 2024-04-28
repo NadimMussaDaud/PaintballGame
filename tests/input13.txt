@@ -1,0 +1,123 @@
+game 10 10 2 3
+6 1 10 bunker One
+6 2 10 bunker Two
+1 1 10 bunker alone
+first bunker One
+second bunker Two
+create red bunker One
+create green bunker Two
+move 6 1 west west west
+move 6 2 north
+attack
+status 
+game 10 10 3 3
+1 1 10 Castle One
+5 1 10 Castle Two
+2 3 10 Castle Three
+first Castle One
+second Castle Two
+third Castle Three
+create red Castle One
+create red Castle Two
+create green Castle Three
+attack
+players
+bunkers
+map
+move 2 3 south
+players
+bunkers
+create red Castle Two
+move 2 4 east
+attack
+status
+game 10 10 3 3
+10 10 10 Castle One
+5 1 10 Castle Two
+2 3 10 Castle Three
+first Castle One
+second Castle Two
+third Castle Three
+create red Castle One
+create red Castle Two
+create green Castle Three
+attack
+attack
+move 2 3 east
+move 5 1 west west west
+move 3 3 north
+attack
+status
+help
+game 10 10 3 3
+1 1 10 Castle One
+5 1 10 Castle Two
+2 3 10 Castle Three
+first Castle One
+second Castle Two
+third Castle Three
+create red Castle One
+create red Castle Two
+create red Castle Three
+attack
+help
+game 10 10 3 3
+5 5 10 Castle One
+5 6 10 Castle Two
+7 10 10 Castle Three
+first Castle One
+second Castle Two
+third Castle Three
+create red Castle One
+create red Castle Two
+create green Castle Three
+attack
+players
+bunkers
+map
+move 7 10 north
+players
+bunkers
+create red Castle Two
+move 7 9 east
+attack
+help
+game 10 10 3 3
+1 1 10 Castle One
+5 1 10 Castle Two
+2 3 10 Castle Three
+first Castle One
+second Castle Two
+third Castle Three
+create red Castle One
+create green Castle Two
+create red Castle Three
+attack
+players
+bunkers
+map
+move 5 1 south
+players
+bunkers
+move 2 3 north north west
+move 5 2 north
+attack
+status
+game 10 10 3 3
+1 1 10 Castle One
+5 1 10 Castle Two
+2 3 10 Castle Three
+first Castle One
+second Castle Two
+third Castle Three
+create red Castle One
+create blue Castle Two
+create red Castle Three
+move 1 1 east east south
+move 5 1 east
+move 2 3 south south south
+create red Castle One
+move 6 1 south
+create red Castle Three
+attack
+quit

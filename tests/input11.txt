@@ -1,0 +1,45 @@
+game 10 10 2 4
+3 4 5 Castle One
+5 5 5 Castle Two
+2 1 1 Castle Three
+5 1 1 Castle Four
+Red Castle One
+Blue Castle Two
+create green Castle One
+create red Castle Two
+move 3 4 east
+move 5 5 north east west
+move 4 4 east
+create blue Castle Two
+create red Castle One
+move 5 5 north
+players
+move 3 4 south east east
+move 5 4 north
+create green Castle One
+move 5 3 north
+create red Castle Two
+move 5 2 north
+players
+move 5 5 north north north
+move 5 1 south
+move 3 4 west
+create blue Castle Four
+move 2 4 north
+move 5 1 south
+move 2 3 north
+players
+bunkers
+create green Castle Four
+move 5 2 north south south
+move 5 1 south
+move 2 2 north
+move 5 2 south
+create green Castle Two
+move 5 3 south
+move 2 1 west
+create red Castle Four
+move 5 5 north
+move 5 1 south south south
+help
+quit

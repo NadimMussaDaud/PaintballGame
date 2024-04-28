@@ -1,0 +1,308 @@
+> 3 bunkers:
+2 teams:
+first> red player created in bunker One
+second> green player created in bunker Two
+first> red player in position (5, 1)
+red player in position (4, 1)
+red player in position (3, 1)
+second> Bunker seized.
+green player in position (6, 1)
+first> All players eliminated.
+Winner is second.
+> Invalid command.
+> 3 bunkers:
+3 teams:
+first> red player created in Castle One
+second> red player created in Castle Two
+third> green player created in Castle Three
+first> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 B . . . B . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+third> 1 players:
+green player in position (2, 3)
+third> 1 bunkers:
+Castle Three with 12 coins in position (2, 3)
+third> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . . . . . . .
+2 . . . . . . . . . .
+3 . O . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+third> green player in position (2, 4)
+first> Without players.
+first> 2 bunkers:
+Castle One with 11 coins in position (1, 1)
+Castle Two with 11 coins in position (5, 1)
+first> red player created in Castle Two
+third> green player in position (3, 4)
+first> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 B . . . O . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+third> 10 10
+3 bunkers:
+Castle One (first)
+Castle Two (first)
+Castle Three (third)
+2 teams:
+first; third
+third> 3 bunkers:
+3 teams:
+first> red player created in Castle One
+second> red player created in Castle Two
+third> green player created in Castle Three
+first> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . . . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . O
+second> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . O . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . B
+third> green player in position (3, 3)
+second> red player in position (4, 1)
+red player in position (3, 1)
+red player in position (2, 1)
+third> green player in position (3, 2)
+second> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . B . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . B
+third> 10 10
+3 bunkers:
+Castle One (second)
+Castle Two (second)
+Castle Three (third)
+2 teams:
+second; third
+third> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+third> 3 bunkers:
+3 teams:
+first> red player created in Castle One
+second> red player created in Castle Two
+third> red player created in Castle Three
+first> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 O . . . B . . . . .
+2 . . . . . . . . . .
+3 . B . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+Winner is first.
+> game - Create a new game
+help - Show available commands
+quit - End program execution
+> 3 bunkers:
+3 teams:
+first> red player created in Castle One
+second> red player created in Castle Two
+third> green player created in Castle Three
+first> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . . . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . B . . . . .
+6 . . . . B . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+third> 1 players:
+green player in position (7, 10)
+third> 1 bunkers:
+Castle Three with 12 coins in position (7, 10)
+third> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . . . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . O . . .
+third> green player in position (7, 9)
+first> Without players.
+first> 2 bunkers:
+Castle One with 11 coins in position (5, 5)
+Castle Two with 11 coins in position (5, 6)
+first> red player created in Castle Two
+third> green player in position (8, 9)
+first> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . . . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . B . . . . .
+6 . . . . B . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+third> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+third> 3 bunkers:
+3 teams:
+first> red player created in Castle One
+second> green player created in Castle Two
+third> red player created in Castle Three
+first> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 B . . . . . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+second> 1 players:
+green player in position (5, 1)
+second> 1 bunkers:
+Castle Two with 12 coins in position (5, 1)
+second> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 . . . . O . . . . .
+2 . . . . . . . . . .
+3 . . . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+second> green player in position (5, 2)
+third> 1 players:
+red player in position (2, 3)
+third> 1 bunkers:
+Castle Three with 11 coins in position (2, 3)
+third> red player in position (2, 2)
+red player in position (2, 1)
+Bunker seized.
+red player in position (1, 1)
+second> green player in position (5, 1)
+third> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 B . . . . . . . . .
+2 . . . . . . . . . .
+3 . B . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+second> 10 10
+3 bunkers:
+Castle One (third)
+Castle Two (second)
+Castle Three (third)
+2 teams:
+second; third
+second> 3 bunkers:
+3 teams:
+first> red player created in Castle One
+second> blue player created in Castle Two
+third> red player created in Castle Three
+first> red player in position (2, 1)
+red player in position (3, 1)
+red player in position (3, 2)
+second> blue player in position (6, 1)
+third> red player in position (2, 4)
+red player in position (2, 5)
+red player in position (2, 6)
+first> red player created in Castle One
+second> blue player in position (6, 2)
+third> red player created in Castle Three
+first> 10 10
+**1 2 3 4 5 6 7 8 9 10
+1 O . . . B . . . . .
+2 . . P . . . . . . .
+3 . B . . . . . . . .
+4 . . . . . . . . . .
+5 . . . . . . . . . .
+6 . . . . . . . . . .
+7 . . . . . . . . . .
+8 . . . . . . . . . .
+9 . . . . . . . . . .
+10 . . . . . . . . . .
+Winner is first.
+> Bye.

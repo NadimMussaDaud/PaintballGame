@@ -1,0 +1,189 @@
+game 10 10 2 4
+3 4 5 Castle One
+5 5 5 Castle Two
+2 1 1 Castle Three
+5 1 1 Castle Four
+Red Castle One
+Blue Castle Two
+create green Castle One
+create red Castle Two
+move 3 4 east
+move 5 5 north east west
+move 4 4 east
+create blue Castle Two
+create red Castle One
+move 5 5 north
+players
+move 3 4 south east east
+move 5 4 south
+help
+game 10 10 2 4
+3 4 5 Castle One
+5 5 5 Castle Two
+2 1 1 Castle Three
+5 1 1 Castle Four
+Red Castle One
+Blue Castle Two
+create green Castle One
+create red Castle Two
+move 3 4 east
+move 5 5 north east west
+move 4 4 east
+create blue Castle Two
+create red Castle One
+move 5 5 north
+players
+move 3 4 south east east
+move 5 4 north
+create green Castle One
+move 5 3 north
+create red Castle Two
+move 5 2 north
+players
+move 5 5 north north north
+move 5 1 south
+move 5 2 north east east
+help
+game 10 10 2 3
+3 2 10 Castle Black
+6 5 15 Castle Red
+6 2 7 Castle My
+TeamBlack Castle Black
+TeamRed Castle Red
+status
+create red Castle Black
+create red Castle Red
+move 3 2 south east east
+bunkers
+move 6 5 north east north
+players
+create green Castle Black
+players
+move 7 3 west west west
+move 3 2 east
+move 4 3 west north north
+bunkers
+players
+move 4 2 east
+bunkers
+players
+create blue Castle Black
+players
+move 5 2 east
+players
+move 3 1 east east east
+players
+move 6 2 north
+players
+bunkers
+move 3 2 north
+move 6 1 east
+move 3 1 east
+move 7 1 west
+move 4 1 east
+move 6 1 west
+players
+move 5 1 west
+create move Castle My
+move 4 1 south
+create blue Castle My
+move 4 2 west
+move 6 2 north
+create red Castle Red
+move 6 1 south
+move 3 2 south
+move 6 2 south
+status
+create red Castle Black
+move 6 3 south
+move 6 5 north north north
+game 10 10 2 3
+3 2 10 Castle Black
+6 5 15 Castle Red
+6 2 7 Castle My
+TeamBlack Castle Black
+TeamRed Castle Red
+status
+create red Castle Black
+create red Castle Red
+move 3 2 south east east
+bunkers
+move 6 5 north east north
+players
+create green Castle Black
+players
+move 7 3 west west west
+move 3 2 east
+move 4 3 west north north
+bunkers
+players
+move 4 2 east
+bunkers
+players
+create blue Castle Black
+players
+move 5 2 east
+players
+move 3 1 east east east
+players
+move 6 2 north
+players
+bunkers
+move 3 2 north
+move 6 1 east
+move 3 1 east
+move 7 1 west
+move 4 1 east
+move 6 1 west
+players
+move 5 1 west
+create move Castle My
+move 4 1 south
+create blue Castle My
+move 4 2 west
+move 6 2 north
+create red Castle Red
+move 6 1 south
+move 3 2 south
+players
+move 6 2 west
+move 3 2 east
+move 5 2 south
+move 3 3 east
+players
+create blue c
+players
+move 4 3 east
+players
+bunkers
+create blue Castle My
+players
+move 6 5 north north north
+help
+game 10 10 2 2
+3 4 10 Castle One
+1 5 10 Castle Two
+first Castle One
+second Castle Two
+create red Castle One
+create blue Castle Two
+create xx Castle One
+move 1 5 east
+move 3 4 west west south
+move 2 5 west
+help
+game 10 10 2 3
+3 4 10 Castle One
+1 5 10 Castle Two
+2 5 10 Castle Three
+first Castle One
+second Castle Two
+create red Castle One
+create blue Castle Two
+create xx Castle One
+move 1 5 east
+move 3 4 west west south
+move 2 5 west
+move 1 5 east
+create xx cc
+quit

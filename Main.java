@@ -18,13 +18,13 @@ public class Main {
     private static final String MOVING_OFF = "Trying to move off the map.";
     private static final String OCCUPIED_POSITION = "Position occupied.";
     private static final String BUNKER_OCCUPIED = "Bunker not free.";
-    private static final String BUNKER_ILLEGALY_INVADED = "Bunker illegally invaded";
+    private static final String BUNKER_ILLEGALY_INVADED = "Bunker illegally invaded.";
     private static final String NON_EXISTENT_BUNKER = "Non-existent bunker.";
     private static final String NON_EXISTENT_PLAYER = "Non-existent player type.";
     private static final String FATAL_ERROR = "FATAL ERROR: Insufficient number of teams.";
     private static final String INVALID_TEAM = "Team not created.";
     private static final String INVALID_BUNKER = "Bunker not created.";
-    private static final String INVALID_COMMAND = "Invalid Command";
+    private static final String INVALID_COMMAND = "Invalid command.";
     private static final String HELP_MESSAGE_FORMAT = "%s - %s\n";
     private static final String QUIT_MESSAGE = "Bye.";
     private static final String PLAYER_CREATED = "%s player created in %s\n";
@@ -64,8 +64,8 @@ public class Main {
                             move(in);
                         }
                         else{
-                            invalidCommand();
                             in.nextLine();
+                            invalidCommand();
                         }
                     }
                     case CREATE -> {
@@ -73,8 +73,8 @@ public class Main {
                             create(in);
                         }
                         else{
-                            invalidCommand();
                             in.nextLine();
+                            invalidCommand();
                         }
                     }
                     case ATTACK -> {
@@ -83,8 +83,8 @@ public class Main {
                             in.nextLine();
                         }
                         else{
-                            invalidCommand();
                             in.nextLine();
+                            invalidCommand();
                         }
                     }
                     case STATUS -> {
@@ -93,8 +93,8 @@ public class Main {
                             in.nextLine();
                         }
                         else{
-                            invalidCommand();
                             in.nextLine();
+                            invalidCommand();
                         }
                     }
                     case MAP -> {
@@ -103,8 +103,8 @@ public class Main {
                             in.nextLine();
                         }
                         else{
-                            invalidCommand();
                             in.nextLine();
+                            invalidCommand();
                         }
                     }
                     case BUNKERS -> {
@@ -113,18 +113,18 @@ public class Main {
                             in.nextLine();
                         }
                         else{
-                            invalidCommand();
                             in.nextLine();
+                            invalidCommand();
                         }
                     }
                     case PLAYERS -> {
                         if(game != null){
-                            players();
                             in.nextLine();
+                            players();
                         }
                         else{
-                            invalidCommand();
                             in.nextLine();
+                            invalidCommand();
                         }
                     }
                     case HELP -> {
@@ -136,8 +136,8 @@ public class Main {
                         in.nextLine();
                     }
                     case UNKNOWN -> {
-                        invalidCommand();
                         in.nextLine();
+                        invalidCommand();
                     }
                 }
             
@@ -182,12 +182,10 @@ public class Main {
         String dir2,dir3;
         String dir23 = in.nextLine().trim(); //Maybe empty if type is NOT RED
         boolean hasDir23 = !dir23.equals(EMPTY);
-        boolean isDir123 = isDirection(dir1);
 
         if(hasDir23){
             dir2 = dir23.split(" ")[0];
             dir3 = dir23.split(" ")[1];
-            isDir123 = isDirection(dir1) && isDirection(dir2) && isDirection(dir3);
 
             directions.insertLast(dir2);
             directions.insertLast(dir3);
@@ -195,17 +193,15 @@ public class Main {
 
         if(!game.isPosition(x,y)){
             System.out.println(INVALID_POSITION);
-        } else if(!isDir123){
-            System.out.println(INVALID_DIRECTION);
+            game.changeTurns();
         } else if(!game.hasPlayer(x,y)){
             System.out.println(NO_PLAYER);
+            game.changeTurns();
         } else if(!p.getType().equals(RED) && hasDir23){
             System.out.println(INVALID_MOVE);
-        } else if(game.isMovingOff(x,y, dir1)){
-            System.out.println(MOVING_OFF);
-        } else if(!p.getType().equals(RED) && !game.isFreePosition(x,y,dir1)){
-            System.out.println(OCCUPIED_POSITION);
-        }else{
+            game.changeTurns();
+        } 
+        else{
             /* 
             Iterator<String> it = directions.iterator();
             while(it.hasNext()){
@@ -239,7 +235,7 @@ public class Main {
         int size = array.size();
         if(size > 0){
             System.out.printf(PLAYER_FORMAT, size);
-            Iterator<Player> it = game.players().iterator();
+            Iterator<Player> it = array.iterator();
             while (it.hasNext()) {
                 Player p = it.next();
                 System.out.printf(PLAYER_INFO,p.getType(), p.getX(), p.getY());
@@ -285,16 +281,20 @@ public class Main {
         //Prints the colummns indexes
         System.out.print("**");
         for(int i=1; i <= width-1; i++){
-            System.out.printf("%d ", i);
+            String str = (i == width-1) ? "%d" : "%d ";
+            System.out.printf(str, i);
+            
         }
         System.out.println();
 
         for(int i = 1; i < height; i++){
-            System.out.printf("%d ",i);
+            String str1 = (i == width-1) ? "%d " : "%d ";
+            System.out.printf(str1,i);
             for(int j = 1; j < width; j++){
-                System.out.printf("%s ", map[j][i]);
+                String str2 = (j == width-1) ? "%s\n" : "%s ";
+                System.out.printf(str2, map[j][i]);
             }
-            System.out.println();
+            //System.out.println();
         }
 
     }
@@ -319,7 +319,7 @@ public class Main {
 
             while (it.hasNext()) {
                 Bunker b = it.next();
-                System.out.printf("%s with %d coins in position (%d,%d)\n", b.getName(),b.getTreasure(), b.getX(), b.getY());
+                System.out.printf("%s with %d coins in position (%d, %d)\n", b.getName(),b.getTreasure(), b.getX(), b.getY());
             }
         }else{
             System.out.println(NO_BUNKERS);
@@ -353,7 +353,6 @@ public class Main {
         System.out.printf("%s %s\n", array.get(0), array.get(1));
     }
     
-
     private static void initGame(Scanner in) {
         int width = in.nextInt();
         int height = in.nextInt();
@@ -392,11 +391,6 @@ public class Main {
                     break;
             }
         }
-        
-            
-
-
-        
         /*
         if(!game.canPlay()){
             game = null;
@@ -404,8 +398,9 @@ public class Main {
         }*/
     }
 
+
     private static boolean ValidTeam(String team, String bunker) {
-        if( game.hasTeam(team) || !game.hasBunker(bunker) || game.isOccupiedBunker(bunker) )
+        if( game.hasTeam(team) || !game.hasBunker(bunker) || game.bunkerWithTeam(bunker))
             return false;
         return true;
 
@@ -439,6 +434,7 @@ public class Main {
     }
 
     private static void exitMessage(){
+        game = null;
         System.out.println(QUIT_MESSAGE);
     }
 
@@ -452,13 +448,11 @@ public class Main {
         }
         else{
             for (Command c: Command.values() ) {
-                System.out.printf(HELP_MESSAGE_FORMAT,c.getName(),c.getMessage());
+                if(!c.equals(Command.UNKNOWN))
+                    System.out.printf(HELP_MESSAGE_FORMAT,c.getName(),c.getMessage());
             }
         }
     }
 
-    private static boolean isDirection(String dir){
-        return (dir.equals(SOUTH) || dir.equals(NORTH) || dir.equals(EAST) || dir.equals(WEST)); 
-    }
 }
 

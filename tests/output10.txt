@@ -1,0 +1,589 @@
+> 8 bunkers:
+Bunker not created.
+4 teams:
+TeamRed> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (without owner)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (without owner)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamRed> red player created in Castle Two
+teamBlue> red player created in Castle Five
+TeamWhite> red player created in Castle Four
+TeamBlack> red player created in Castle Six
+TeamRed> red player in position (10, 19)
+red player in position (10, 20)
+red player in position (9, 20)
+teamBlue> red player in position (2, 20)
+red player in position (3, 20)
+red player in position (4, 20)
+TeamWhite> red player in position (14, 4)
+red player in position (13, 4)
+red player in position (12, 4)
+TeamBlack> red player in position (2, 5)
+red player in position (3, 5)
+red player in position (4, 5)
+TeamRed> red player in position (8, 20)
+red player in position (7, 20)
+red player in position (6, 20)
+teamBlue> red player in position (5, 20)
+Won the fight.
+red player in position (6, 20)
+red player in position (6, 19)
+TeamWhite> green player created in Castle Four
+TeamBlack> green player created in Castle Six
+TeamRed> 1 bunkers:
+Castle Two with 14 coins in position (10, 18)
+TeamRed> Without players.
+TeamRed> green player created in Castle Two
+teamBlue> red player in position (7, 19)
+red player in position (8, 19)
+red player in position (9, 19)
+TeamWhite> 2 players:
+red player in position (12, 4)
+green player in position (14, 5)
+TeamWhite> green player in position (14, 4)
+TeamBlack> 2 players:
+red player in position (4, 5)
+green player in position (1, 5)
+TeamBlack> red player in position (4, 4)
+red player in position (5, 4)
+red player in position (6, 4)
+TeamRed> 1 players:
+green player in position (10, 18)
+TeamRed> green player in position (10, 19)
+teamBlue> 1 players:
+red player in position (9, 19)
+teamBlue> blue player created in Castle Five
+TeamWhite> 2 players:
+red player in position (12, 4)
+green player in position (14, 4)
+TeamWhite> green player in position (13, 4)
+TeamBlack> 2 players:
+red player in position (6, 4)
+green player in position (1, 5)
+TeamBlack> red player in position (7, 4)
+red player in position (8, 4)
+red player in position (9, 4)
+TeamRed> 1 players:
+green player in position (10, 19)
+TeamRed> Won the fight.
+green player in position (9, 19)
+teamBlue> 1 players:
+blue player in position (1, 20)
+teamBlue> blue player in position (2, 20)
+TeamWhite> 2 players:
+red player in position (12, 4)
+green player in position (13, 4)
+TeamWhite> green player in position (13, 5)
+TeamBlack> 2 players:
+red player in position (9, 4)
+green player in position (1, 5)
+TeamBlack> red player in position (10, 4)
+red player in position (11, 4)
+Won the fight.
+red player in position (12, 4)
+TeamRed> 1 players:
+green player in position (9, 19)
+TeamRed> 1 bunkers:
+Castle Two with 24 coins in position (10, 18)
+TeamRed> blue player created in Castle Two
+teamBlue> 1 players:
+blue player in position (2, 20)
+teamBlue> blue player in position (2, 19)
+TeamWhite> 1 players:
+green player in position (13, 5)
+TeamWhite> green player in position (13, 4)
+TeamBlack> 2 players:
+red player in position (12, 4)
+green player in position (1, 5)
+TeamBlack> green player in position (1, 6)
+TeamRed> 2 players:
+green player in position (9, 19)
+blue player in position (10, 18)
+TeamRed> green player in position (8, 19)
+teamBlue> 1 players:
+blue player in position (2, 19)
+teamBlue> blue player in position (3, 19)
+TeamWhite> 1 players:
+green player in position (13, 4)
+TeamWhite> Won the fight.
+green player in position (12, 4)
+TeamBlack> 1 players:
+green player in position (1, 6)
+TeamBlack> green player in position (2, 6)
+TeamRed> 2 players:
+green player in position (8, 19)
+blue player in position (10, 18)
+TeamRed> green player in position (7, 19)
+teamBlue> 1 players:
+blue player in position (3, 19)
+teamBlue> blue player in position (4, 19)
+TeamWhite> 1 players:
+green player in position (12, 4)
+TeamWhite> green player in position (11, 4)
+TeamBlack> 1 players:
+green player in position (2, 6)
+TeamBlack> 1 bunkers:
+Castle Six with 39 coins in position (1, 5)
+TeamBlack> red player created in Castle Six
+TeamRed> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (without owner)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (without owner)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamRed> 2 players:
+green player in position (7, 19)
+blue player in position (10, 18)
+TeamRed> green player in position (7, 18)
+teamBlue> 1 players:
+blue player in position (4, 19)
+teamBlue> blue player in position (4, 18)
+TeamWhite> 1 players:
+green player in position (11, 4)
+TeamWhite> red player created in Castle Four
+TeamBlack> 2 players:
+green player in position (2, 6)
+red player in position (1, 5)
+TeamBlack> red player in position (1, 4)
+red player in position (1, 3)
+red player in position (1, 2)
+TeamRed> 2 players:
+green player in position (7, 18)
+blue player in position (10, 18)
+TeamRed> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (without owner)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (without owner)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamRed> No player in that position.
+teamBlue> 1 players:
+blue player in position (4, 18)
+teamBlue> blue player in position (3, 18)
+TeamWhite> 2 players:
+green player in position (11, 4)
+red player in position (14, 5)
+TeamWhite> Bunker not free.
+TeamBlack> 2 players:
+green player in position (2, 6)
+red player in position (1, 2)
+TeamBlack> red player in position (2, 2)
+red player in position (3, 2)
+red player in position (4, 2)
+TeamRed> 2 players:
+green player in position (7, 18)
+blue player in position (10, 18)
+TeamRed> No player in that position.
+teamBlue> 1 players:
+blue player in position (3, 18)
+teamBlue> blue player in position (3, 17)
+TeamWhite> 2 players:
+green player in position (11, 4)
+red player in position (14, 5)
+TeamWhite> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (without owner)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (without owner)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamWhite> green player in position (11, 5)
+TeamBlack> 2 players:
+green player in position (2, 6)
+red player in position (4, 2)
+TeamBlack> blue player created in Castle Six
+TeamRed> 2 players:
+green player in position (7, 18)
+blue player in position (10, 18)
+TeamRed> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (without owner)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (without owner)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamRed> green player in position (7, 19)
+teamBlue> 1 players:
+blue player in position (3, 17)
+teamBlue> blue player in position (3, 18)
+TeamWhite> 2 players:
+green player in position (11, 5)
+red player in position (14, 5)
+TeamWhite> green player in position (10, 5)
+TeamBlack> 3 players:
+green player in position (2, 6)
+red player in position (4, 2)
+blue player in position (1, 5)
+TeamBlack> red player in position (4, 3)
+red player in position (4, 4)
+red player in position (4, 5)
+TeamRed> 2 players:
+green player in position (7, 19)
+blue player in position (10, 18)
+TeamRed> No player in that position.
+teamBlue> 1 players:
+blue player in position (3, 18)
+teamBlue> 1 bunkers:
+Castle Five with 51 coins in position (1, 20)
+teamBlue> blue player created in Castle Five
+TeamWhite> 2 players:
+green player in position (10, 5)
+red player in position (14, 5)
+TeamWhite> red player in position (13, 5)
+red player in position (12, 5)
+red player in position (11, 5)
+TeamBlack> 3 players:
+green player in position (2, 6)
+red player in position (4, 5)
+blue player in position (1, 5)
+TeamBlack> red player in position (5, 5)
+red player in position (4, 5)
+red player in position (5, 5)
+TeamRed> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (without owner)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (without owner)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamRed> 2 players:
+green player in position (7, 19)
+blue player in position (10, 18)
+TeamRed> No player in that position.
+teamBlue> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (without owner)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (without owner)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+teamBlue> 2 players:
+blue player in position (3, 18)
+blue player in position (1, 20)
+teamBlue> blue player in position (4, 18)
+TeamWhite> 2 players:
+green player in position (10, 5)
+red player in position (11, 5)
+TeamWhite> green player in position (9, 5)
+TeamBlack> 3 players:
+green player in position (2, 6)
+red player in position (5, 5)
+blue player in position (1, 5)
+TeamBlack> green player in position (2, 7)
+TeamRed> 2 players:
+green player in position (7, 19)
+blue player in position (10, 18)
+TeamRed> blue player in position (10, 19)
+teamBlue> 2 players:
+blue player in position (4, 18)
+blue player in position (1, 20)
+teamBlue> Bunker seized.
+blue player in position (5, 18)
+TeamWhite> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (teamBlue)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (without owner)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamWhite> 2 players:
+green player in position (9, 5)
+red player in position (11, 5)
+TeamWhite> green player in position (8, 5)
+TeamBlack> 3 players:
+green player in position (2, 7)
+red player in position (5, 5)
+blue player in position (1, 5)
+TeamBlack> green player in position (2, 8)
+TeamRed> 2 players:
+green player in position (7, 19)
+blue player in position (10, 19)
+TeamRed> blue player in position (10, 18)
+teamBlue> blue player in position (1, 19)
+TeamWhite> 2 players:
+green player in position (8, 5)
+red player in position (11, 5)
+TeamWhite> Bunker seized.
+green player in position (7, 5)
+TeamBlack> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (teamBlue)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (TeamWhite)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamBlack> 3 players:
+green player in position (2, 8)
+red player in position (5, 5)
+blue player in position (1, 5)
+TeamBlack> blue player in position (2, 5)
+TeamRed> 2 players:
+green player in position (7, 19)
+blue player in position (10, 18)
+TeamRed> blue player in position (11, 18)
+teamBlue> 2 players:
+blue player in position (5, 18)
+blue player in position (1, 19)
+teamBlue> blue player in position (1, 20)
+TeamWhite> 2 players:
+green player in position (7, 5)
+red player in position (11, 5)
+TeamWhite> red player in position (11, 4)
+red player in position (10, 4)
+red player in position (9, 4)
+TeamBlack> 3 players:
+green player in position (2, 8)
+red player in position (5, 5)
+blue player in position (2, 5)
+TeamBlack> red player created in Castle Six
+TeamRed> 2 players:
+green player in position (7, 19)
+blue player in position (11, 18)
+TeamRed> 15 20
+7 bunkers:
+Castle One (without owner)
+Castle Two (TeamRed)
+Castle Three (teamBlue)
+Castle Five (teamBlue)
+Castle Six (TeamBlack)
+Castle Four (TeamWhite)
+Castle Seven (TeamWhite)
+4 teams:
+TeamRed; teamBlue; TeamWhite; TeamBlack
+TeamRed> 2 players:
+green player in position (7, 19)
+blue player in position (11, 18)
+TeamRed> blue player in position (11, 19)
+teamBlue> 2 players:
+blue player in position (5, 18)
+blue player in position (1, 20)
+teamBlue> blue player in position (4, 18)
+TeamWhite> 2 players:
+green player in position (7, 5)
+red player in position (9, 4)
+TeamWhite> red player in position (9, 3)
+red player in position (9, 2)
+red player in position (9, 1)
+TeamBlack> 4 players:
+green player in position (2, 8)
+red player in position (5, 5)
+blue player in position (2, 5)
+red player in position (1, 5)
+TeamBlack> green player in position (2, 9)
+TeamRed> green player created in Castle Two
+teamBlue> blue player in position (4, 19)
+TeamWhite> green player in position (6, 5)
+TeamBlack> Position occupied.
+Position occupied.
+Position occupied.
+TeamRed> green player in position (7, 18)
+teamBlue> blue player in position (4, 18)
+TeamWhite> Won the fight.
+green player in position (5, 5)
+TeamBlack> blue player in position (3, 5)
+TeamRed> green player in position (6, 18)
+teamBlue> blue player in position (5, 18)
+TeamWhite> green player in position (4, 5)
+TeamBlack> Won the fight.
+blue player in position (4, 5)
+TeamRed> green player in position (10, 19)
+teamBlue> Won the fight.
+blue player in position (6, 18)
+TeamWhite> 1 players:
+red player in position (9, 1)
+TeamWhite> 4 bunkers:
+2 teams:
+Red> green player created in Castle One
+Blue> red player created in Castle Two
+Red> green player in position (4, 4)
+Blue> red player in position (5, 4)
+red player in position (6, 4)
+red player in position (5, 4)
+Red> 1 players:
+green player in position (4, 4)
+Red> Won the fight.
+green player in position (5, 4)
+Blue> Without players.
+Blue> 1 bunkers:
+Castle Two with 6 coins in position (5, 5)
+Blue> blue player created in Castle Two
+Red> 1 players:
+green player in position (5, 4)
+Red> red player created in Castle One
+Blue> Won the fight.
+blue player in position (5, 4)
+Red> 1 players:
+red player in position (3, 4)
+Red> red player in position (3, 5)
+red player in position (4, 5)
+red player in position (3, 5)
+Blue> 1 players:
+blue player in position (5, 4)
+Blue> 1 bunkers:
+Castle Two with 8 coins in position (5, 5)
+Blue> 10 10
+4 bunkers:
+Castle One (Red)
+Castle Two (Blue)
+Castle Three (without owner)
+Castle Four (without owner)
+2 teams:
+Red; Blue
+Blue> blue player in position (6, 4)
+Red> 1 players:
+red player in position (3, 5)
+Red> No player in that position.
+Blue> blue player in position (6, 3)
+Red> 5 bunkers:
+3 teams:
+blue> blue player created in Castle2
+red> red player created in Castle3
+black> green player created in Castle1
+blue> 1 players:
+blue player in position (3, 2)
+blue> blue player in position (2, 2)
+red> 1 players:
+red player in position (5, 2)
+red> red player in position (5, 3)
+Bunker seized.
+red player in position (5, 4)
+red player in position (5, 5)
+black> 1 players:
+green player in position (1, 2)
+black> Bunker not free.
+blue> 1 players:
+blue player in position (2, 2)
+blue> Won the fight and bunker seized.
+blue player in position (1, 2)
+red> 10 10
+5 bunkers:
+Castle1 (blue)
+Castle2 (blue)
+Castle3 (red)
+Castle4 (without owner)
+Castle5 (red)
+2 teams:
+blue; red
+red> blue player created in Castle3
+blue> 10 10
+5 bunkers:
+Castle1 (blue)
+Castle2 (blue)
+Castle3 (red)
+Castle4 (without owner)
+Castle5 (red)
+2 teams:
+blue; red
+blue> 1 players:
+blue player in position (1, 2)
+blue> 3 bunkers:
+3 teams:
+reino1> blue player created in c1
+reino2> blue player created in c2
+reino3> red player created in c3
+reino1> blue player in position (2, 2)
+reino2> Won the fight.
+blue player in position (2, 2)
+reino3> red player in position (4, 2)
+Bunker seized.
+red player in position (3, 2)
+Won the fight.
+red player in position (2, 2)
+reino1> 10 10
+3 bunkers:
+c1 (reino1)
+c2 (reino3)
+c3 (reino3)
+2 teams:
+reino1; reino3
+reino1> Without players.
+reino1> 1 bunkers:
+c1 with 14 coins in position (1, 2)
+reino1> blue player created in c1
+reino3> 1 players:
+red player in position (2, 2)
+reino3> 10 10
+3 bunkers:
+c1 (reino1)
+c2 (reino3)
+c3 (reino3)
+2 teams:
+reino1; reino3
+reino3> 5 bunkers:
+3 teams:
+blue> 10 10
+5 bunkers:
+Castle1 (black)
+Castle2 (blue)
+Castle3 (red)
+Castle4 (without owner)
+Castle5 (without owner)
+3 teams:
+blue; red; black
+blue> blue player created in Castle2
+red> red player created in Castle3
+black> green player created in Castle1
+blue> blue player in position (4, 2)
+red> Won the fight.
+red player in position (4, 2)
+Bunker seized.
+red player in position (3, 2)
+red player in position (2, 2)
+black> 10 10
+5 bunkers:
+Castle1 (black)
+Castle2 (red)
+Castle3 (red)
+Castle4 (without owner)
+Castle5 (without owner)
+2 teams:
+red; black
+black> green player in position (1, 3)
+red> 1 players:
+red player in position (2, 2)
+red> 2 bunkers:
+Castle3 with 12 coins in position (5, 2)
+Castle2 with 14 coins in position (3, 2)
+red> blue player created in Castle2
+black> Bye.

@@ -1,0 +1,67 @@
+> 4 bunkers:
+2 teams:
+Red> green player created in Castle One
+Blue> red player created in Castle Two
+Red> green player in position (4, 4)
+Blue> red player in position (5, 4)
+red player in position (6, 4)
+red player in position (5, 4)
+Red> Won the fight.
+green player in position (5, 4)
+Blue> blue player created in Castle Two
+Red> red player created in Castle One
+Blue> Won the fight.
+blue player in position (5, 4)
+Red> 1 players:
+red player in position (3, 4)
+Red> red player in position (3, 5)
+red player in position (4, 5)
+Bunker seized.
+red player in position (5, 5)
+Blue> blue player in position (5, 3)
+Red> green player created in Castle One
+Blue> blue player in position (5, 2)
+Red> Bunker not free.
+Blue> Bunker seized.
+blue player in position (5, 1)
+Red> 2 players:
+red player in position (5, 5)
+green player in position (3, 4)
+Red> red player in position (5, 4)
+red player in position (5, 3)
+red player in position (5, 2)
+Blue> Player eliminated.
+Red> green player in position (2, 4)
+Blue> blue player created in Castle Four
+Red> green player in position (2, 3)
+Blue> Player eliminated.
+Red> green player in position (2, 2)
+Blue> Without players.
+Blue> 1 bunkers:
+Castle Four with 20 coins in position (5, 1)
+Blue> green player created in Castle Four
+Red> Player eliminated.
+Blue> green player in position (5, 2)
+Red> Bunker seized.
+green player in position (2, 1)
+Blue> green player in position (5, 3)
+Red> green player created in Castle Two
+Blue> green player in position (5, 4)
+Red> green player in position (1, 1)
+Blue> red player created in Castle Four
+Red> Won the fight.
+green player in position (5, 4)
+Blue> red player in position (5, 2)
+red player in position (5, 3)
+Player eliminated.
+Red> game - Create a new game
+move - Move a player
+create - Create a player in a bunker
+attack - Attack with all players of the current team
+status - Show the current state of the game
+map - Show the map of the current team
+bunkers - List the bunkers of the current team, by the order they were seized
+players - List the active players of the current team, by the order they were created
+help - Show available commands
+quit - End program execution
+Red> Bye.

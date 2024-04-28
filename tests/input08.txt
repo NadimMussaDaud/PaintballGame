@@ -1,0 +1,90 @@
+game 20 20 3 4
+10 15 4 Winterfell
+12 20 5 Castle Black
+1 3 10 Casterly Rock
+15 16 2 Dread Fort
+Lannister Casterly Rock
+Stark Winterfell
+NightWatch Castle Black
+create red Casterly Rock
+create green Winterfell
+create blue Castle Black
+players
+map
+move 1 3 south south south
+players
+move 10 15 north
+players
+move 12 20 west
+players
+map
+create green Casterly Rock
+players
+create red Winterfell
+players
+create red Castle Black
+bunkers
+players
+move 1 6 south south east
+players
+move 10 15 east west east
+players
+map
+bunkers
+move 12 10 south
+players
+move 2 8 south east east
+players
+map
+move 10 14 west
+players
+map
+move 11 20 south
+players
+move 4 7 east east east
+players
+move 11 15 west west north
+players
+move 11 20 west
+players
+bunkers
+map
+move 1 3 west
+players
+move 9 15 north south north
+players
+move 12 20 west west south
+players
+move 7 7 north north east
+players
+map
+move 9 14 south
+players
+move 11 20 south north west
+map
+players
+move 1 3 north
+players
+move 9 14 south
+map
+players
+create red Castle Black
+players
+create blue Casterly Rock
+players
+map
+bunkers
+create blue Winterfell
+players
+map
+map
+move 10 19 south north north
+players
+map
+move 1 3 north
+players
+map
+move 10 15 south south east
+players
+map
+quit
