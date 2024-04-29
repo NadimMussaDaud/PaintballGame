@@ -22,8 +22,8 @@ class RedPlayer extends AbstractPlayer {
     @Override
     public Array<Integer> getAttackCoord(int width, int height){
         Array<Integer> coords = new ArrayClass<>();
-        for(int x = this.x; x <= height; x++){
-            for(int y = this.y; y <= width; y++){
+        for(int y = this.y; y <= height; y++){
+            for(int x = this.x; x <= width; x++){
                 if(x != this.x || y != this.y){
                     coords.insertLast(x);
                     coords.insertLast(y);

@@ -22,14 +22,14 @@ class BluePlayer extends AbstractPlayer{
     @Override
     public Array<Integer> getAttackCoord(int width,int height) {
         Array<Integer> coord = new ArrayClass<>();
-        for(int i = 1; i < width-1; i++){
-            if(y-i > 0){
-                coord.insertLast(x); 
-                coord.insertLast(y-i); //insert left y
+        for(int i = 1; i < width; i++){
+            if(x-i > 0){
+                coord.insertLast(x-i); 
+                coord.insertLast(y); //insert left y
             }
-            if(y+i < height){
-                coord.insertLast(x); 
-                coord.insertLast(y+i); //insert right y
+            if(x+i <= width){ 
+                coord.insertLast(x+i); 
+                coord.insertLast(y); //insert right y
             }
         }
         return coord;

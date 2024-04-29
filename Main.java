@@ -145,26 +145,35 @@ public class Main {
 
     private static void attack() {
         String[][] map = game.attack();
-        int width = map.length;
-        int height = map[0].length;
-        System.out.printf("%d %d\n", width-1, height-1);
-        
-        //Prints the colummns indexes
-        System.out.print("**");
-        for(int i=1; i <= width-1; i++){
-            System.out.printf("%d ", i);
-        }
-        System.out.println();
+        String winner = game.getWinner();
 
-        for(int i = 1; i < height; i++){
-            System.out.printf("%d ",i);
-            for(int j = 1; j < width; j++){
-                System.out.printf("%s ", map[j][i]);
+        if(map == null){
+            System.out.println("All players eliminated.");
+        }
+        if(map != null){
+            int width = map.length;
+            int height = map[0].length;
+            System.out.printf("%d %d\n", width-1, height-1);
+            
+            //Prints the colummns indexes
+            System.out.print("**");
+            for(int i=1; i <= width-1; i++){
+                String str = (i == width-1) ? "%d" : "%d ";
+                System.out.printf(str, i);
+                
             }
             System.out.println();
+
+            for(int i = 1; i < height; i++){
+                String str1 = (i == width-1) ? "%d " : "%d ";
+                System.out.printf(str1,i);
+                for(int j = 1; j < width; j++){
+                    String str2 = (j == width-1) ? "%s\n" : "%s ";
+                    System.out.printf(str2, map[j][i]);
+                }
+                //System.out.println();
+            }
         }
-        
-        String winner = game.getWinner();
         if(winner != null){
             game = null;
             System.out.printf(WINNER_MESSAGE,winner);

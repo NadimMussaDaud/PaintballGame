@@ -15,4 +15,5 @@ public interface Team {
     void removeBunker(Bunker b);
     boolean hasBunker(Bunker bunker);
     String initialBunker();
+    int getPlayersNumber();
 }

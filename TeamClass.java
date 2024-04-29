@@ -71,4 +71,9 @@ public class TeamClass implements Team{
         return initialBunker.getName();
     }
 
+    @Override
+    public int getPlayersNumber() {
+        return players.size();
+    }
+
 }
