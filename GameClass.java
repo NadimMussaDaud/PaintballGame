@@ -530,9 +530,7 @@ public class GameClass implements Game{
         if(teams.size() == 1)
             gameOver = true;
     }
-    
-    //Uma equipa é ativa se tiver bunkers em seu nome OU se tiver jogadores
-    //Verificar se equipa permanece ativa e se não há WINNER
+ 
     @Override
     public String[][] attack() {
         Team t = getTeam(getTurnTeamName());
@@ -549,7 +547,6 @@ public class GameClass implements Game{
     
         String[][] map1 = map();
 
-        //Saber que o jogador foi eliminado e que a sua equipa não tem mais jogadores
         if( getTeam(t.getName()) == null) 
             map1 = null;
 
@@ -583,30 +580,23 @@ public class GameClass implements Game{
                                 removeTeam(oldTeam);
                             }
                         }
-
                     }
                     else if(!getTeam(getTurnTeamName()).hasBunker(b)){ // occupied bunker
                         Player defender = getPlayer(x, y);
                         Player winner = fight(defender,p);
                         // seize the opponents bunker
-                        if(winner.equals(p)){
-                            
-                        }else{
-                            break; // Jogador foi eliminado acabar jogo
+                        if(!winner.equals(p)){
+                            break;
                         }
-                    } else { // free bunker from player's team
-             
-                    }
+                    } 
                 }else if(hasPlayer(x, y)){ // map position with player
                     if(!getPlayer(x, y).getTeam().equals(p.getTeam()) ){
                         Player winner = fight(getPlayer(x, y),p);
-                        if(winner.equals(p)){
-                  
-                        }else {
-                            p=null; //player eliminated
+                        if(!winner.equals(p)){
+                            p = null;
                         }
-                    }else {}//Position occupied
-                } else {}
+                    }
+                }
             } 
         }
     }
@@ -638,30 +628,23 @@ public class GameClass implements Game{
                                 removeTeam(oldTeam);
                             }
                         }
-
                     }
                     else if(!getTeam(getTurnTeamName()).hasBunker(b)){ // occupied bunker
                         Player defender = getPlayer(x, y);
                         Player winner = fight(defender,p);
                         // seize the opponents bunker
-                        if(winner.equals(p)){
-                            
-                        }else{
-                            break; // Jogador foi eliminado acabar jogo
+                        if(!winner.equals(p)){
+                            break;
                         }
-                    } else { // free bunker from player's team
-             
                     }
                 }else if(hasPlayer(x, y)){ // map position with player
                     if(!getPlayer(x, y).getTeam().equals(p.getTeam()) ){
                         Player winner = fight(getPlayer(x, y),p);
-                        if(winner.equals(p)){
-                  
-                        }else {
-                            p=null; //player eliminated
+                        if(!winner.equals(p)){
+                            p=null;
                         }
-                    }else {}//Position occupied
-                } else {}
+                    }
+                }
             } 
         }
 
@@ -699,25 +682,18 @@ public class GameClass implements Game{
                         Player defender = getPlayer(x, y);
                         Player winner = fight(defender,p);
                         // seize the opponents bunker
-                        if(winner.equals(p)){
-                            
-                        }else{
-                            
-                            break; // Jogador foi eliminado acabar jogo
+                        if(!winner.equals(p)){
+                            break;
                         }
-                    } else { // free bunker from player's team
-             
                     }
                 }else if(hasPlayer(x, y)){ // map position with player
                     if(!getPlayer(x, y).getTeam().equals(p.getTeam()) ){
                         Player winner = fight(getPlayer(x, y),p);
-                        if(winner.equals(p)){
-                  
-                        }else {
-                            p=null; //player eliminated
+                        if(!winner.equals(p)){
+                            p = null;
                         }
-                    }else {}//Position occupied
-                } else {}
+                    }
+                }
             } 
         }
 

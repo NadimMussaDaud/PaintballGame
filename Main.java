@@ -6,17 +6,10 @@ import dataStructures.Iterator;
 public class Main {
 
     private static final String INVALID_POSITION = "Invalid Position.";
-    private static final String INVALID_DIRECTION = "Invalid direction.";
     private static final String EMPTY = "";
-    private static final String SOUTH = GameClass.SOUTH;
-    private static final String EAST = GameClass.EAST;
-    private static final String NORTH = GameClass.NORTH;
-    private static final String WEST = GameClass.WEST;
     private static final String NO_COINS = "Insufficient coins for recruitment.";
     private static final String NO_PLAYER = "No player in that position.";
     private static final String INVALID_MOVE = "Invalid move.";
-    private static final String MOVING_OFF = "Trying to move off the map.";
-    private static final String OCCUPIED_POSITION = "Position occupied.";
     private static final String BUNKER_OCCUPIED = "Bunker not free.";
     private static final String BUNKER_ILLEGALY_INVADED = "Bunker illegally invaded.";
     private static final String NON_EXISTENT_BUNKER = "Non-existent bunker.";
@@ -171,7 +164,6 @@ public class Main {
                     String str2 = (j == width-1) ? "%s\n" : "%s ";
                     System.out.printf(str2, map[j][i]);
                 }
-                //System.out.println();
             }
         }
         if(winner != null){
@@ -189,7 +181,7 @@ public class Main {
         directions.insertLast(dir1);
         
         String dir2,dir3;
-        String dir23 = in.nextLine().trim(); //Maybe empty if type is NOT RED
+        String dir23 = in.nextLine().trim(); 
         boolean hasDir23 = !dir23.equals(EMPTY);
 
         if(hasDir23){
@@ -211,20 +203,7 @@ public class Main {
             game.changeTurns();
         } 
         else{
-            /* 
-            Iterator<String> it = directions.iterator();
-            while(it.hasNext()){
-                String dir = it.next();
-                if(!game.isMovingOff(p.getX(), p.getY(),dir)){
-                    if(game.isFreePosition(p.getX(), p.getY(), dir)){
-                        
-                        System.out.println(game.move(p, dir));
-                
-                    }else
-                         System.out.println(OCCUPIED_POSITION);
-                }else
-                     System.out.println(MOVING_OFF);
-            }*/
+            
                     Iterator<String> it = game.move(p,directions);
                     while (it.hasNext()) {
                         System.out.println(it.next());
@@ -303,7 +282,6 @@ public class Main {
                 String str2 = (j == width-1) ? "%s\n" : "%s ";
                 System.out.printf(str2, map[j][i]);
             }
-            //System.out.println();
         }
 
     }
@@ -400,11 +378,6 @@ public class Main {
                     break;
             }
         }
-        /*
-        if(!game.canPlay()){
-            game = null;
-            System.out.println(FATAL_ERROR);
-        }*/
     }
 
 
