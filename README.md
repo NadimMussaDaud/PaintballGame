@@ -1,7 +1,7 @@
 
-### Paintball Management Tournament**
+### Paintball Management Tournament
 
-```markdown
+
 # Paintball Tournament Manager
 
 ## Project Overview
@@ -20,7 +20,6 @@ This project is a Java application for managing paintball tournaments. It simula
 - **Java Version**: Java 8 or higher.
 - **Dependencies**: None.
 
-   ```
 
 ## Project Structure
 
@@ -31,13 +30,6 @@ This project is a Java application for managing paintball tournaments. It simula
 
 Upon running the application, you'll be prompted to set up a tournament, add players, and simulate matches until the final winner is determined. Detailed instructions will be displayed in the terminal.
 
-```
-
----
-
-### README for **PDF_EN_OOP_Project1.v1.6 (1).pdf**
-
-```markdown
 # Paintball Game
 
 ## Project Overview
@@ -66,10 +58,3 @@ This project is a turn-based strategy game called "Paintball Game," implemented 
 Once the game starts, you'll be prompted to configure the map dimensions, teams, and bunkers. Teams take turns creating players, moving them across the map, and attacking other teams to eliminate them.
 
 The game ends when only one team remains.
-
-## Contact
-
-For any inquiries, feel free to reach out at [your email].
-```
-
-These README files provide a clear overview of the projects, setup instructions, and how to run the applications. You can replace placeholders like `[your email]` with your actual contact information.
