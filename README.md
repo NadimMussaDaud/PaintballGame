@@ -21,7 +21,6 @@ This project is a Java application for managing paintball tournaments. It simula
 ## Project Structure
 
 - **src/**: Contains all the Java source files.
-- **bin/**: Directory for compiled class files.
   
 ## Example Usage
 
@@ -48,7 +47,6 @@ This project is a turn-based strategy game called "Paintball Game," implemented 
 ## Project Structure
 
 - **src/**: Contains all the Java source files.
-- **bin/**: Directory for compiled class files.
   
 ## Example Gameplay
 
