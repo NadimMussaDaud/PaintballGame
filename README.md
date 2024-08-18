@@ -1,7 +1,4 @@
 
-### Paintball Management Tournament
-
-
 # Paintball Tournament Manager
 
 ## Project Overview
